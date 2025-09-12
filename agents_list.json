@@ -1,0 +1,94 @@
+[
+  {
+    "name": "MVI Agent",
+    "description": "GPT-4.1 - Reliable all-rounder, balanced speed & quality"
+  },
+  {
+    "name": "Claude AI",
+    "description": "Claude 4 Sonnet - Long-context expert, precise instruction following"
+  },
+  {
+    "name": "Deep Analyst",
+    "description": "o3 - Strong everyday reasoning, cost-efficient"
+  },
+  {
+    "name": "Deep Analyst Pro",
+    "description": "o3 Pro - Deeper reasoning, complex tasks mastery"
+  },
+  {
+    "name": "Gemini AI",
+    "description": "Gemini 2.5 Pro - True multimodal powerhouse, broad reasoning"
+  },
+  {
+    "name": "ATE AI",
+    "description": "Agent to extract analyst statements from earnings call transcripts and categorize into Revenue, M&A, Product Portfolio, COGS, Management & Organization, SG&A, Capital Returns, CapEx, and Macro"
+  },
+  {
+    "name": "Boosting Industry Perspectives",
+    "description": "Analyzes recent earnings/investor call Q&A across companies, extracts cross-company themes, outputs concise analytics tables for executives/boards"
+  },
+  {
+    "name": "CuratedThemer",
+    "description": "Generates and distributes relevant analyst themes to McKinsey leaders to guide client activation"
+  },
+  {
+    "name": "EntityMatcher",
+    "description": "Agent specialized in identifying companies"
+  },
+  {
+    "name": "ESG adviser",
+    "description": "Provides ESG insights and analyses across 6 dimensions: Materiality, KPIs/targets, ESG benchmarking, Disclosures/ratings, ESG value generation, and Operating model/org design"
+  },
+  {
+    "name": "EventWatch",
+    "description": "Tracks real-time news and corporate events (e.g., activism, executive changes, earnings, M&A, IPOs, reorganizations, product launches) for actionable monitoring insights"
+  },
+  {
+    "name": "GPT5 AI",
+    "description": "GPT-5 - Unified flagship, advanced safe reasoning"
+  },
+  {
+    "name": "Granularity of Growth",
+    "description": "Uses org data and financials to evaluate company strategic positioning"
+  },
+  {
+    "name": "IndustryAnalyst",
+    "description": "Orchestrator of aggregator agents for industry-level analyses"
+  },
+  {
+    "name": "IndustryAnalyst (Claude)",
+    "description": "Orchestrator of aggregator agents for industry-level analyses"
+  },
+  {
+    "name": "MVI DataFetch",
+    "description": "Generates downloadable reports from company lists and financial metrics using MVIP Data Download"
+  },
+  {
+    "name": "MVI VaS",
+    "description": "Financial \u201cValue at Stake\u201d model to estimate upside from levers backed by anecdotal evidence"
+  },
+  {
+    "name": "MVI VaS excel builder",
+    "description": "Excel builder version of MVI VaS for deep research"
+  },
+  {
+    "name": "MVIA Open Chat",
+    "description": "Specialized intelligence agent with full access to transcripts (earnings, M&A, guidance, analyst days, etc.) and company filings for deep research and due diligence"
+  },
+  {
+    "name": "Transcripter",
+    "description": "Intelligence agent with access to transcripts and filings across multiple event types for financial analysis and due diligence"
+  },
+  {
+    "name": "ValueAnalyst",
+    "description": "Outside-in value creation agent for industry"
+  },
+  {
+    "name": "ValueAnalyst Bank",
+    "description": "Outside-in value creation agent for banks"
+  },
+  {
+    "name": "Web AI",
+    "description": "Assistant to search, retrieve, and summarize internet information in real time; ideal for research and fact-checking (prefers internal financial data when relevant)"
+  }
+]
