@@ -1,94 +1,140 @@
 [
   {
-    "name": "MVI Agent",
-    "description": "GPT-4.1 - Reliable all-rounder, balanced speed & quality"
+    "model-name": "MVI Agent",
+    "model-id": "GPT-4.1",
+    "model-description": "Reliable all-rounder, balanced speed & quality",
+    "model-type": "primary"
   },
   {
-    "name": "Claude AI",
-    "description": "Claude 4 Sonnet - Long-context expert, precise instruction following"
+    "model-name": "Claude AI",
+    "model-id": "Claude 4 Sonnet",
+    "model-description": "Long-context expert, precise instruction following",
+    "model-type": "primary"
   },
   {
-    "name": "Deep Analyst",
-    "description": "o3 - Strong everyday reasoning, cost-efficient"
+    "model-name": "Deep Analyst",
+    "model-id": "o3",
+    "model-description": "Strong everyday reasoning, cost-efficient",
+    "model-type": "primary"
   },
   {
-    "name": "Deep Analyst Pro",
-    "description": "o3 Pro - Deeper reasoning, complex tasks mastery"
+    "model-name": "Deep Analyst Pro",
+    "model-id": "o3 Pro",
+    "model-description": "Deeper reasoning, complex tasks mastery",
+    "model-type": "primary"
   },
   {
-    "name": "Gemini AI",
-    "description": "Gemini 2.5 Pro - True multimodal powerhouse, broad reasoning"
+    "model-name": "Gemini AI",
+    "model-id": "Gemini 2.5 Pro",
+    "model-description": "True multimodal powerhouse, broad reasoning",
+    "model-type": "primary"
   },
   {
-    "name": "ATE AI",
-    "description": "Agent to extract analyst statements from earnings call transcripts and categorize into Revenue, M&A, Product Portfolio, COGS, Management & Organization, SG&A, Capital Returns, CapEx, and Macro"
+    "model-name": "ATE AI",
+    "model-id": null,
+    "model-description": "Extracts analyst statements from earnings call transcripts and categorizes them (Revenue, M&A, Product Portfolio, COGS, Management & Organization, SG&A, Capital Returns, CapEx, Macro).",
+    "model-type": "secondary"
   },
   {
-    "name": "Boosting Industry Perspectives",
-    "description": "Analyzes recent earnings/investor call Q&A across companies, extracts cross-company themes, outputs concise analytics tables for executives/boards"
+    "model-name": "Boosting Industry Perspectives",
+    "model-id": null,
+    "model-description": "Analyzes recent earnings/investor call Q&A across selected companies, surfaces cross-company themes, and outputs concise analytics tables for executives/boards.",
+    "model-type": "secondary"
   },
   {
-    "name": "CuratedThemer",
-    "description": "Generates and distributes relevant analyst themes to McKinsey leaders to guide client activation"
+    "model-name": "CuratedThemer",
+    "model-id": null,
+    "model-description": "Generates and distributes relevant analyst themes to vertical/functional leaders to guide client activation.",
+    "model-type": "secondary"
   },
   {
-    "name": "EntityMatcher",
-    "description": "Agent specialized in identifying companies"
+    "model-name": "EntityMatcher",
+    "model-id": null,
+    "model-description": "Agent specialized in identifying companies.",
+    "model-type": "secondary"
   },
   {
-    "name": "ESG adviser",
-    "description": "Provides ESG insights and analyses across 6 dimensions: Materiality, KPIs/targets, ESG benchmarking, Disclosures/ratings, ESG value generation, and Operating model/org design"
+    "model-name": "ESG adviser",
+    "model-id": null,
+    "model-description": "ESG insights and analyses across six dimensions: Materiality; KPIs and targets; ESG performance and benchmarking; Disclosures, ratings, awards, and memberships; ESG value generation; Operating model / org design.",
+    "model-type": "secondary"
   },
   {
-    "name": "EventWatch",
-    "description": "Tracks real-time news and corporate events (e.g., activism, executive changes, earnings, M&A, IPOs, reorganizations, product launches) for actionable monitoring insights"
+    "model-name": "EventWatch",
+    "model-id": null,
+    "model-description": "Monitors real-time news and corporate events (activism, executive changes, earnings, M&A, IPOs, reorganizations, product launches, and more) for timely, actionable insights.",
+    "model-type": "secondary"
   },
   {
-    "name": "GPT5 AI",
-    "description": "GPT-5 - Unified flagship, advanced safe reasoning"
+    "model-name": "GPT5 AI",
+    "model-id": "GPT-5",
+    "model-description": "Unified flagship, advanced safe reasoning.",
+    "model-type": "secondary"
   },
   {
-    "name": "Granularity of Growth",
-    "description": "Uses org data and financials to evaluate company strategic positioning"
+    "model-name": "Granularity of Growth",
+    "model-id": null,
+    "model-description": "Uses org data, financial data, and basic company financials to evaluate strategic positioning.",
+    "model-type": "secondary"
   },
   {
-    "name": "IndustryAnalyst",
-    "description": "Orchestrator of aggregator agents for industry-level analyses"
+    "model-name": "IndustryAnalyst",
+    "model-id": null,
+    "model-description": "Orchestrator of aggregator agents to run industry-level analyses.",
+    "model-type": "secondary"
   },
   {
-    "name": "IndustryAnalyst (Claude)",
-    "description": "Orchestrator of aggregator agents for industry-level analyses"
+    "model-name": "IndustryAnalyst (Claude)",
+    "model-id": null,
+    "model-description": "Orchestrator of aggregator agents to run industry-level analyses.",
+    "model-type": "secondary"
   },
   {
-    "name": "MVI DataFetch",
-    "description": "Generates downloadable reports from company lists and financial metrics using MVIP Data Download"
+    "model-name": "MVI DataFetch",
+    "model-id": null,
+    "model-description": "Generates downloadable reports from company lists and financial metrics using MVIP Data Download capabilities.",
+    "model-type": "secondary"
   },
   {
-    "name": "MVI VaS",
-    "description": "Financial \u201cValue at Stake\u201d model to estimate upside from levers backed by anecdotal evidence"
+    "model-name": "MVI VaS",
+    "model-id": null,
+    "model-description": "Financial Value at Stake (VaS) model to estimate potential upside from specific levers backed by anecdotal evidence.",
+    "model-type": "secondary"
   },
   {
-    "name": "MVI VaS excel builder",
-    "description": "Excel builder version of MVI VaS for deep research"
+    "model-name": "MVI VaS excel builder",
+    "model-id": null,
+    "model-description": "Excel builder for the MVI VaS model, used for deep research.",
+    "model-type": "secondary"
   },
   {
-    "name": "MVIA Open Chat",
-    "description": "Specialized intelligence agent with full access to transcripts (earnings, M&A, guidance, analyst days, etc.) and company filings for deep research and due diligence"
+    "model-name": "MVIA Open Chat",
+    "model-id": null,
+    "model-description": "Access to full company transcripts (earnings, guidance, analyst days, M&A, etc.) and SEC filings for deep research and due diligence.",
+    "model-type": "secondary"
   },
   {
-    "name": "Transcripter",
-    "description": "Intelligence agent with access to transcripts and filings across multiple event types for financial analysis and due diligence"
+    "model-name": "Transcripter",
+    "model-id": null,
+    "model-description": "Provides company transcripts across multiple event types and access to filings for financial analysis and due diligence.",
+    "model-type": "secondary"
   },
   {
-    "name": "ValueAnalyst",
-    "description": "Outside-in value creation agent for industry"
+    "model-name": "ValueAnalyst",
+    "model-id": null,
+    "model-description": "Outside-in value creation agent for industry.",
+    "model-type": "secondary"
   },
   {
-    "name": "ValueAnalyst Bank",
-    "description": "Outside-in value creation agent for banks"
+    "model-name": "ValueAnalyst Bank",
+    "model-id": null,
+    "model-description": "Outside-in value creation agent for banks.",
+    "model-type": "secondary"
   },
   {
-    "name": "Web AI",
-    "description": "Assistant to search, retrieve, and summarize internet information in real time; ideal for research and fact-checking (prefers internal financial data when relevant)"
+    "model-name": "Web AI",
+    "model-id": null,
+    "model-description": "Searches, retrieves, and summarizes information from the internet in real time; ideal for research and fact-checking.",
+    "model-type": "secondary"
   }
 ]
