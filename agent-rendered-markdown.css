@@ -1,5 +1,5 @@
 /* Only affects agent-rendered markdown */
-.chat-markdown h1, .chat-markdown h2, .chat-markdown h3,
+.chat-markdown h1, .chat-markdown h2, .chat-markdown h3 { color: red; },
 .chat-markdown h4, .chat-markdown h5, .chat-markdown h6 { margin: 0 0 .5em; line-height: 1.25; }
 .chat-markdown p { margin: 0 0 .75em; }
 .chat-markdown a { color: inherit; text-decoration: underline; }
