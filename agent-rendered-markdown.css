@@ -4,7 +4,9 @@
     margin: 0 0 1em;
     line-height: 1.25;
     color: black;
+    font-weight: 400;
 }
+
 
 /* Clear, descending scale */
 .chat-markdown h1 { font-size: 2.0em; }
@@ -28,24 +30,24 @@
     text-underline-position: under;
 }
 
-.chat-markdown strong { font-weight: 500; }
+.chat-markdown strong { font-weight: 500; color: black }
 .chat-markdown em { font-style: italic; }
 
 .chat-markdown ul,
 .chat-markdown ol {
     font-family: Mckinseysans, sans-serif;
-    margin: 0 0 1.25em 1.5em;
-    padding: 0;
+    margin: 0 0 0.8em 1em;
+    padding-left: 1.5em;
     font-weight: 300;
-    font-size: 0.95em;
-    line-height: 1.5;
+    font-size: 1em;
     gap: 0em;
+       margin-top: 0.5em;
 }
 
 .chat-markdown li {
-    margin: .25em 0;
-    line-height: 1.4;
-    padding-left: 0;
+    margin: 0em;
+    line-height: 1.5;
+    padding-left: 0.5em;
 }
 
 .chat-markdown hr {
@@ -56,8 +58,10 @@
 
 .chat-markdown blockquote {
     font-size: 1em;
-    margin: 0 0 1em;
-    padding-left: .75em;
+    margin-left: 2em;
+    padding-left: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     border-left: 2px solid rgba(0,0,0,.12);
     color: rgba(0,0,0,.7);
 }
@@ -71,10 +75,11 @@
 
 .chat-markdown th,
 .chat-markdown td {
-    padding: .5em 1.5em .5em 0;
+    padding: .3em 1.5em .3em 0;
     text-align: left;
     font-size: 0.95em;
     font-weight: 300;
+    line-height: 1.3;
 }
 
 /* add a divider only between rows, not after the last one */
@@ -83,8 +88,9 @@
 }
 
 .chat-markdown thead th {
+    font-family: Mckinseysans, sans-serif;
     background: white;
-    font-weight: 500;
+    font-weight: 400;
     color: black;
     font-size: 0.95em;
     border-bottom: 1px solid black;
