@@ -3,14 +3,14 @@
 .chat-markdown h4, .chat-markdown h5, .chat-markdown h6 { margin: 0 0 .5em; line-height: 1.25; }
 .chat-markdown p { margin: 0 0 .75em; }
 .chat-markdown a { color: inherit; text-decoration: underline; }
-.chat-markdown strong { font-weight: 700; }
+.chat-markdown strong { font-weight: 500; }
 .chat-markdown em { font-style: italic; }
 .chat-markdown ul, .chat-markdown ol { margin: 0 0 .75em 1.25em; padding: 0; }
 .chat-markdown li { margin: .2em 0; }
 .chat-markdown hr { border: 0; border-top: 1px solid rgba(0,0,0,.12); margin: 1em 0; }
 .chat-markdown blockquote { margin: 0 0 .75em; padding-left: .75em; border-left: 3px solid rgba(0,0,0,.12); color: rgba(0,0,0,.7); }
 .chat-markdown table { width: 100%; border-collapse: collapse; margin: .75em 0; }
-.chat-markdown th, .chat-markdown td { border: 1px solid rgba(0,0,0,.12); padding: 8px; text-align: left; }
+.chat-markdown th, .chat-markdown td { border: 0px solid rgba(0,0,0,.12); padding: 8px; text-align: left; }
 .chat-markdown thead th { background: rgba(0,0,0,.04); }
 .chat-markdown code { background: rgba(0,0,0,.05); padding: 0 4px; border-radius: 3px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
 .chat-markdown pre { background: rgba(0,0,0,.05); padding: 10px; border-radius: 6px; overflow: auto; margin: 0 0 .75em; }
