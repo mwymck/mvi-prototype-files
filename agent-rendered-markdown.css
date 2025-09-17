@@ -71,11 +71,15 @@
 
 .chat-markdown th,
 .chat-markdown td {
-    border-bottom: 1px solid #e6e6e6;
     padding: .5em 1.5em .5em 0;
     text-align: left;
     font-size: 0.95em;
     font-weight: 300;
+}
+
+/* add a divider only between rows, not after the last one */
+.chat-markdown tbody tr:not(:last-child) td {
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .chat-markdown thead th {
