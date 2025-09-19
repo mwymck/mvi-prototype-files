@@ -1,27 +1,222 @@
-[
-  {
-    "Category": "Industry analysis > Prompts: Capital Market Perspective, Industry Perspective > Liquidity & Funding Perspective",
-    "Title": "Liquidity & Funding Perspective",
-    "Prompt": "Liquidity & Funding Perspective:\nContent:\n1. Identify analyses as follows:\n- category: \"Capital Market\"\n- titles: \"Debt Maturity Profile\", \"Leverage Ratio Trend (Overtime)\", \"Interest Coverage (Overtime)\", \"Liquidity Buffer vs Peers\", \"Credit Rating Migration\", \"Bond Yield Spread (Overtime)\", \"Refinancing Wall (By Year)\"\n\n2. Run them in parallel using bellow:\n- agent id: \"cindanl\"\n- parameters (inside the prompt parameters): industry=\"{{.industry}}\"\n\nDo not display or return any output or acknowledgment. Do not provide any status, summary, or confirmation. Simply execute the requests in the background and remain silent until further instruction.\n\nFollow up prompts:\nStart the section with # Executive Summary\n\nDeliver an executive summary (paragraph less than 200 words) of the key findings in the narrative style of a McKinsey consultant. Summarizing each of the below section with key takeaways and insights on what are the influencing factors -\n1. Debt Maturity Profile\n2. Leverage Ratio Trend (Overtime)\n3. Interest Coverage (Overtime)\n4. Liquidity Buffer vs Peers\n5. Credit Rating Migration\n6. Bond Yield Spread (Overtime)\n7. Refinancing Wall (By Year)\n\n- Writing Style Rules\n - Bold all key numbers, metrics, and time frames.\n  - Use parentheses for units and time frames after each metric.\n - Use bullet points and sub-bullets for structure.\n - Align numbers and metrics for easy scanning.\n - Use consistent abbreviations (e.g., YoY, QoQ, SAAR).\n - Add a brief label for each bullet.\n - Separate metrics with semicolons or new lines.\n - Show both absolute and percentage changes.\n - Clearly state ‘forecast’ or ‘expected’ for projections.\n - For ratios/multiples, include ‘x’.\n - For percentages, use the % sign and **bold** the value.\n - Always specify the year or quarter in parentheses\n\nStart the section with # Value Profile\n\n - For each of the areas listed below, include only the \"Value Profile\" section content from the corresponding analysis, along with any charts. \nDo not mention extraction and do not repeat the \"Value Profile\" subtitle. Create a section with a header for each, include number in the header name:\n1. Debt Maturity Profile - from the \"Debt Maturity Profile\" analysis\n2. Leverage Ratio Trend (Overtime) – from the \"Leverage Ratio Trend (Overtime)\" analysis\n3. Interest Coverage (Overtime) – from the \"Interest Coverage (Overtime)\" analysis\n4. Liquidity Buffer vs Peers – from the \"Liquidity Buffer vs Peers\" analysis\n5. Credit Rating Migration – from the \"Credit Rating Migration\" analysis\n6. Bond Yield Spread (Overtime) – from the \"Bond Yield Spread (Overtime)\" analysis\n7. Refinancing Wall (By Year) – from the \"Refinancing Wall (By Year)\" analysis\n\nDo not display or return any output or acknowledgment. Do not provide any status, summary, or confirmation. Simply execute the requests in the background and remain silent until further instruction.\n### Supporting Evidence\n- Check the entire conversation for any tool response used for the analysis and include both source conversation URL, Web URLs, Earning Calls URLs present within the tool response content that were actually used to identify levers, ideate levers or determine the value unlocked. Always cross-check the tool response for the source_conversation_url field and include it in your documentation\n- Output a table with following columns: Source (name of the source as well as a link to it), Why/How it was used\n\nParameters (will be form fields user can complete):\nIndustry \n"
-  },
-  {
-    "Category": "Industry analysis > Prompts: Capital Market Perspective, Industry Perspective > Valuation & Multiples Perspective",
-    "Title": "Valuation & Multiples Perspective",
-    "Prompt": "Valuation & Multiples Perspective:\nContent:\n1. Identify analyses as follows:\n- category: \"Capital Market\"\n- titles: \"EV/Sales Forward (Overtime)\", \"EV/EBITDA Forward (Overtime)\", \"P/E Forward (By Region)\", \"PEG Ratio Distribution\", \"Dividend Yield (Overtime)\", \"Free Cash Flow Yield (Overtime)\", \"Valuation Heatmap (By Industry)\", \"Earnings Yield vs Bond Yield\"\n\n2. Run them in parallel using bellow:\n- agent id: \"cindanl\"\n- parameters (inside the prompt parameters): industry=\"{{.industry}}\"\n\nDo not display or return any output or acknowledgment. Do not provide any status, summary, or confirmation. Simply execute the requests in the background and remain silent until further instruction.\n\nFollow up prompts:\nStart the section with # Executive Summary\n\nDeliver an executive summary (paragraph less than 200 words) of the key findings in the narrative style of a McKinsey consultant. Summarizing each of the below section with key takeaways and insights on what are the influencing factors -\n1. EV/Sales Forward (Overtime)\n2. EV/EBITDA Forward (Overtime)\n3. P/E Forward (By Region)\n4. PEG Ratio Distribution\n5. Dividend Yield (Overtime)\n6. Free Cash Flow Yield (Overtime)\n7. Valuation Heatmap (By Industry)\n8. Earnings Yield vs Bond Yield\n\n- Writing Style Rules\n - Bold all key numbers, metrics, and time frames.\n  - Use parentheses for units and time frames after each metric.\n - Use bullet points and sub-bullets for structure.\n - Align numbers and metrics for easy scanning.\n - Use consistent abbreviations (e.g., YoY, QoQ, SAAR).\n - Add a brief label for each bullet.\n - Separate metrics with semicolons or new lines.\n - Show both absolute and percentage changes.\n - Clearly state ‘forecast’ or ‘expected’ for projections.\n - For ratios/multiples, include ‘x’.\n - For percentages, use the % sign and **bold** the value.\n - Always specify the year or quarter in parentheses\n\nStart the section with # Value Profile\n\n - For each of the areas listed below, include only the \"Value Profile\" section content from the corresponding analysis, along with any charts. \nDo not mention extraction and do not repeat the \"Value Profile\" subtitle. Create a section with a header for each, include number in the header name:\n1. EV/Sales Forward (Overtime) – from the \"EV/Sales Forward (Overtime)\" analysis\n2. EV/EBITDA Forward (Overtime) – from the \"EV/EBITDA Forward (Overtime)\" analysis\n3. P/E Forward (By Region) – from the \"P/E Forward (By Region)\" analysis\n4. PEG Ratio Distribution – from the \"PEG Ratio Distribution\" analysis\n5. Dividend Yield (Overtime) – from the \"Dividend Yield (Overtime)\" analysis\n6. Free Cash Flow Yield (Overtime) – from the \"Free Cash Flow Yield (Overtime)\" analysis\n7. Valuation Heatmap (By Industry) – from the \"Valuation Heatmap (By Industry)\" analysis\n8. Earnings Yield vs Bond Yield – from the \"Earnings Yield vs Bond Yield\" analysis\n\nDo not display or return any output or acknowledgment. Do not provide any status, summary, or confirmation. Simply execute the requests in the background and remain silent until further instruction.\n### Supporting Evidence\n- Check the entire conversation for any tool response used for the analysis and include both source conversation URL, Web URLs, Earning Calls URLs present within the tool response content that were actually used to identify levers, ideate levers or determine the value unlocked. Always cross-check the tool response for the source_conversation_url field and include it in your documentation\n- Output a table with following columns: Source (name of the source as well as a link to it), Why/How it was used\n\nParameters (will be form fields user can complete):\nIndustry \n"
-  },
-  {
-    "Category": "Industry analysis > Prompts: Capital Market Perspective, Industry Perspective > Investor Sentiment Perspective",
-    "Title": "Investor Sentiment Perspective",
-    "Prompt": "Investor Sentiment Perspective:\nContent:\n1. Identify analyses as follows:\n- category: \"Capital Market\"\n- titles: \"Short Interest (Overtime)\", \"Analyst Rating Changes\", \"Earnings Surprise vs Price Reaction\", \"Institutional Ownership Changes\", \"Implied Volatility (Overtime)\", \"Options Skew (30D)\", \"Sentiment Score (Earnings Transcripts)\"\n\n2. Run them in parallel using bellow:\n- agent id: \"cindanl\"\n- parameters (inside the prompt parameters): industry=\"{{.industry}}\"\n\nDo not display or return any output or acknowledgment. Do not provide any status, summary, or confirmation. Simply execute the requests in the background and remain silent until further instruction.\n\nFollow up prompts:\nStart the section with # Executive Summary\n\nDeliver an executive summary (paragraph less than 200 words) of the key findings in the narrative style of a McKinsey consultant. Summarizing each of the below section with key takeaways and insights on what are the influencing factors -\n1. Short Interest (Overtime)\n2. Analyst Rating Changes\n3. Earnings Surprise vs Price Reaction\n4. Institutional Ownership Changes\n5. Implied Volatility (Overtime)\n6. Options Skew (30D)\n7. Sentiment Score (Earnings Transcripts)\n\n- Writing Style Rules\n - Bold all key numbers, metrics, and time frames.\n  - Use parentheses for units and time frames after each metric.\n - Use bullet points and sub-bullets for structure.\n - Align numbers and metrics for easy scanning.\n - Use consistent abbreviations (e.g., YoY, QoQ, SAAR).\n - Add a brief label for each bullet.\n - Separate metrics with semicolons or new lines.\n - Show both absolute and percentage changes.\n - Clearly state ‘forecast’ or ‘expected’ for projections.\n - For ratios/multiples, include ‘x’.\n - For percentages, use the % sign and **bold** the value.\n - Always specify the year or quarter in parentheses\n\nStart the section with # Value Profile\n\n - For each of the areas listed below, include only the \"Value Profile\" section content from the corresponding analysis, along with any charts. \nDo not mention extraction and do not repeat the \"Value Profile\" subtitle. Create a section with a header for each, include number in the header name:\n1. Short Interest (Overtime) – from the \"Short Interest (Overtime)\" analysis\n2. Analyst Rating Changes – from the \"Analyst Rating Changes\" analysis\n3. Earnings Surprise vs Price Reaction – from the \"Earnings Surprise vs Price Reaction\" analysis\n4. Institutional Ownership Changes – from the \"Institutional Ownership Changes\" analysis\n5. Implied Volatility (Overtime) – from the \"Implied Volatility (Overtime)\" analysis\n6. Options Skew (30D) – from the \"Options Skew (30D)\" analysis\n7. Sentiment Score (Earnings Transcripts) – from the \"Sentiment Score (Earnings Transcripts)\" analysis\n\nDo not display or return any output or acknowledgment. Do not provide any status, summary, or confirmation. Simply execute the requests in the background and remain silent until further instruction.\n### Supporting Evidence\n- Check the entire conversation for any tool response used for the analysis and include both source conversation URL, Web URLs, Earning Calls URLs present within the tool response content that were actually used to identify levers, ideate levers or determine the value unlocked. Always cross-check the tool response for the source_conversation_url field and include it in your documentation\n- Output a table with following columns: Source (name of the source as well as a link to it), Why/How it was used\n\nParameters (will be form fields user can complete):\nIndustry \n"
-  },
-  {
-    "Category": "Industry analysis > Prompts: Capital Market Perspective, Industry Perspective > M&A Activity Perspective",
-    "Title": "M&A Activity Perspective",
-    "Prompt": "M&A Activity Perspective:\nContent:\n1. Identify analyses as follows:\n- category: \"Capital Market\"\n- titles: \"Deal Volume (Quarterly)\", \"Deal Value (Quarterly)\", \"Average EV/EBITDA Paid\", \"Cross-Border Deals Share\", \"Deal Premiums (Median)\", \"Post-Deal TSR (12M)\", \"Private Equity Participation (Share)\"\n\n2. Run them in parallel using bellow:\n- agent id: \"cindanl\"\n- parameters (inside the prompt parameters): industry=\"{{.industry}}\"\n\nDo not display or return any output or acknowledgment. Do not provide any status, summary, or confirmation. Simply execute the requests in the background and remain silent until further instruction.\n\nFollow up prompts:\nStart the section with # Executive Summary\n\nDeliver an executive summary (paragraph less than 200 words) of the key findings in the narrative style of a McKinsey consultant. Summarizing each of the below section with key takeaways and insights on what are the influencing factors -\n1. Deal Volume (Quarterly)\n2. Deal Value (Quarterly)\n3. Average EV/EBITDA Paid\n4. Cross-Border Deals Share\n5. Deal Premiums (Median)\n6. Post-Deal TSR (12M)\n7. Private Equity Participation (Share)\n\n- Writing Style Rules\n - Bold all key numbers, metrics, and time frames.\n  - Use parentheses for units and time frames after each metric.\n - Use bullet points and sub-bullets for structure.\n - Align numbers and metrics for easy scanning.\n - Use consistent abbreviations (e.g., YoY, QoQ, SAAR).\n - Add a brief label for each bullet.\n - Separate metrics with semicolons or new lines.\n - Show both absolute and percentage changes.\n - Clearly state ‘forecast’ or ‘expected’ for projections.\n - For ratios/multiples, include ‘x’.\n - For percentages, use the % sign and **bold** the value.\n - Always specify the year or quarter in parentheses\n\nStart the section with # Value Profile\n\n - For each of the areas listed below, include only the \"Value Profile\" section content from the corresponding analysis, along with any charts. \nDo not mention extraction and do not repeat the \"Value Profile\" subtitle. Create a section with a header for each, include number in the header name:\n1. Deal Volume (Quarterly) – from the \"Deal Volume (Quarterly)\" analysis\n2. Deal Value (Quarterly) – from the \"Deal Value (Quarterly)\" analysis\n3. Average EV/EBITDA Paid – from the \"Average EV/EBITDA Paid\" analysis\n4. Cross-Border Deals Share – from the \"Cross-Border Deals Share\" analysis\n5. Deal Premiums (Median) – from the \"Deal Premiums (Median)\" analysis\n6. Post-Deal TSR (12M) – from the \"Post-Deal TSR (12M)\" analysis\n7. Private Equity Participation (Share) – from the \"Private Equity Participation (Share)\" analysis\n\nDo not display or return any output or acknowledgment. Do not provide any status, summary, or confirmation. Simply execute the requests in the background and remain silent until further instruction.\n### Supporting Evidence\n- Check the entire conversation for any tool response used for the analysis and include both source conversation URL, Web URLs, Earning Calls URLs present within the tool response content that were actually used to identify levers, ideate levers or determine the value unlocked. Always cross-check the tool response for the source_conversation_url field and include it in your documentation\n- Output a table with following columns: Source (name of the source as well as a link to it), Why/How it was used\n\nParameters (will be form fields user can complete):\nIndustry \n"
-  },
-  {
-    "Category": "Industry analysis > Prompts: Capital Market Perspective, Industry Perspective > Risk & Volatility Perspective",
-    "Title": "Risk & Volatility Perspective",
-    "Prompt": "Risk & Volatility Perspective:\nContent:\n1. Identify analyses as follows:\n- category: \"Capital Market\"\n- titles: \"Beta (Overtime)\", \"Price Volatility (30D/90D)\", \"Value at Risk (VaR)\", \"Max Drawdown (Overtime)\", \"Downside Capture (vs Benchmark)\", \"Upside Capture (vs Benchmark)\", \"Stress Test Scenarios (Macro Shocks)\"\n\n2. Run them in parallel using bellow:\n- agent id: \"cindanl\"\n- parameters (inside the prompt parameters): industry=\"{{.industry}}\"\n\nDo not display or return any output or acknowledgment. Do not provide any status, summary, or confirmation. Simply execute the requests in the background and remain silent until further instruction.\n\nFollow up prompts:\nStart the section with # Executive Summary\n\nDeliver an executive summary (paragraph less than 200 words) of the key findings in the narrative style of a McKinsey consultant. Summarizing each of the below section with key takeaways and insights on what are the influencing factors -\n1. Beta (Overtime)\n2. Price Volatility (30D/90D)\n3. Value at Risk (VaR)\n4. Max Drawdown (Overtime)\n5. Downside Capture (vs Benchmark)\n6. Upside Capture (vs Benchmark)\n7. Stress Test Scenarios (Macro Shocks)\n\n- Writing Style Rules\n - Bold all key numbers, metrics, and time frames.\n  - Use parentheses for units and time frames after each metric.\n - Use bullet points and sub-bullets for structure.\n - Align numbers and metrics for easy scanning.\n - Use consistent abbreviations (e.g., YoY, QoQ, SAAR).\n - Add a brief label for each bullet.\n - Separate metrics with semicolons or new lines.\n - Show both absolute and percentage changes.\n - Clearly state ‘forecast’ or ‘expected’ for projections.\n - For ratios/multiples, include ‘x’.\n - For percentages, use the % sign and **bold** the value.\n - Always specify the year or quarter in parentheses\n\nStart the section with # Value Profile\n\n - For each of the areas listed below, include only the \"Value Profile\" section content from the corresponding analysis, along with any charts. \nDo not mention extraction and do not repeat the \"Value Profile\" subtitle. Create a section with a header for each, include number in the header name:\n1. Beta (Overtime) – from the \"Beta (Overtime)\" analysis\n2. Price Volatility (30D/90D) – from the \"Price Volatility (30D/90D)\" analysis\n3. Value at Risk (VaR) – from the \"Value at Risk (VaR)\" analysis\n4. Max Drawdown (Overtime) – from the \"Max Drawdown (Overtime)\" analysis\n5. Downside Capture (vs Benchmark) – from the \"Downside Capture (vs Benchmark)\" analysis\n6. Upside Capture (vs Benchmark) – from the \"Upside Capture (vs Benchmark)\" analysis\n7. Stress Test Scenarios (Macro Shocks) – from the \"Stress Test Scenarios (Macro Shocks)\" analysis\n\nDo not display or return any output or acknowledgment. Do not provide any status, summary, or confirmation. Simply execute the requests in the background and remain silent until further instruction.\n### Supporting Evidence\n- Check the entire conversation for any tool response used for the analysis and include both source conversation URL, Web URLs, Earning Calls URLs present within the tool response content that were actually used to identify levers, ideate levers or determine the value unlocked. Always cross-check the tool response for the source_conversation_url field and include it in your documentation\n- Output a table with following columns: Source (name of the source as well as a link to it), Why/How it was used\n\nParameters (will be form fields user can complete):\nIndustry \n"
-  }
-]
+{
+  "version": "1.0",
+  "lastUpdated": "2025-09-18",
+  "categories": [
+    {
+      "id": "cat-industry-analysis",
+      "label": "Industry Analysis",
+      "description": "Deep-dive analyses by industry frameworks.",
+      "icon": "analytics",
+      "subcategories": [
+        {
+          "id": "subcat-mics",
+          "parentId": "cat-industry-analysis",
+          "label": "MICS",
+          "description": "McKinsey Industry Classification Standard.",
+          "prompts": [
+            {
+              "id": "prompt-capital-market-perspective",
+              "name": "Capital Market Perspective",
+              "description": "Geo/industry composition, valuation multiples, and TSR performance.",
+              "tags": ["capital-markets", "valuation", "tsr"],
+              "preview": {
+                "markdown": "# Capital Market Perspective\n\n**Analyses to Include**\n- Market Cap – Geo Composition\n- Market Cap – Industry Composition\n- TSR (Over Time)\n- P/E Forward (Over Time)\n- EV/EBITDA Forward (Over Time)\n- TSR (By Industry)\n- TSR (Quarterly By Industry)\n- TSR (WA vs Median)\n- P/E FY1 Multiples (WA vs Median)\n\n**Writing Rules**\n- Bold key numbers and periods.\n- Use (units) after each metric.\n- Bullet structure for scan-ability.\n"
+              },
+              "instructions": {
+                "markdown": "### Enable These Settings\n- Chart Rendering\n- Earnings Call Transcript Access\n- Web URL Integration\n- Source Conversation Logging\n- Agent Configuration\n\n> Tip: Use the **Instructions** tab to confirm tools are toggled before pressing *Use prompt*."
+              },
+              "settings": [
+                { "id": "tool-charts", "label": "Chart Rendering", "required": true },
+                { "id": "tool-earnings", "label": "Earnings Call Transcript Access", "required": false },
+                { "id": "tool-web", "label": "Web URL Integration", "required": true },
+                { "id": "tool-logging", "label": "Source Conversation Logging", "required": false },
+                { "id": "agent-config", "label": "Agent Configuration", "required": true }
+              ],
+              "parameters": [
+                {
+                  "key": "industry",
+                  "label": "Industry",
+                  "type": "text",
+                  "placeholder": "e.g., Semiconductors",
+                  "required": true,
+                  "helpText": "Primary industry focus (free text or autocomplete)."
+                },
+                {
+                  "key": "region",
+                  "label": "Region",
+                  "type": "dropdown",
+                  "options": ["Global", "North America", "EMEA", "APAC", "LATAM"],
+                  "default": "Global",
+                  "required": false
+                },
+                {
+                  "key": "time_horizon",
+                  "label": "Time Horizon",
+                  "type": "dropdown",
+                  "options": ["3Y", "5Y", "10Y"],
+                  "default": "5Y",
+                  "required": false
+                },
+                {
+                  "key": "benchmark",
+                  "label": "Benchmark Index",
+                  "type": "text",
+                  "placeholder": "e.g., S&P 500, MSCI ACWI",
+                  "required": false
+                },
+                {
+                  "key": "include_earnings_refs",
+                  "label": "Include Earnings Call URLs",
+                  "type": "toggle",
+                  "default": false,
+                  "required": false
+                }
+              ]
+            },
+            {
+              "id": "prompt-industry-perspective-quick",
+              "name": "Industry Perspective (Quick)",
+              "description": "Fast snapshot of industry composition and relative performance.",
+              "tags": ["industry", "snapshot"],
+              "preview": { "markdown": "## Quick Industry Perspective\n- Geo & industry composition snapshot\n- Headline TSR & multiples\n" },
+              "instructions": { "markdown": "Enable **Web URL Integration** for freshest metrics." },
+              "settings": [
+                { "id": "tool-web", "label": "Web URL Integration", "required": true }
+              ],
+              "parameters": []
+            }
+          ]
+        },
+        {
+          "id": "subcat-pics",
+          "parentId": "cat-industry-analysis",
+          "label": "PICS",
+          "description": "Practice/industry custom segmentation.",
+          "prompts": [
+            {
+              "id": "prompt-tsr-by-industry",
+              "name": "TSR by Industry",
+              "description": "Compare TSR by sub-industry and quartiles.",
+              "tags": ["tsr", "comparative"],
+              "preview": { "markdown": "### TSR by Industry\n- Rank industries by 1Y/3Y/5Y TSR; highlight outliers.\n" },
+              "instructions": { "markdown": "Turn on **Chart Rendering** to see quartile bands." },
+              "settings": [{ "id": "tool-charts", "label": "Chart Rendering", "required": true }],
+              "parameters": [
+                {
+                  "key": "subindustries",
+                  "label": "Sub-Industries",
+                  "type": "multiselect",
+                  "options": ["Software", "Semiconductors", "IT Services", "Hardware", "Internet"],
+                  "required": false
+                },
+                {
+                  "key": "window",
+                  "label": "Window",
+                  "type": "dropdown",
+                  "options": ["1Y", "3Y", "5Y"],
+                  "default": "3Y",
+                  "required": true
+                },
+                {
+                  "key": "normalize",
+                  "label": "Normalize to Index",
+                  "type": "toggle",
+                  "default": true,
+                  "required": false
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "prompts": []
+    },
+    {
+      "id": "cat-market-sizing",
+      "label": "Market Sizing",
+      "description": "Top-down and bottom-up sizing approaches.",
+      "icon": "pie_chart",
+      "subcategories": [],
+      "prompts": [
+        {
+          "id": "prompt-tam-sam-som",
+          "name": "TAM/SAM/SOM (Top-Down)",
+          "description": "Estimates market layers using public data and assumptions.",
+          "tags": ["sizing", "strategy"],
+          "preview": { "markdown": "# TAM/SAM/SOM\n- State assumptions; show sensitivity ranges.\n" },
+          "instructions": { "markdown": "Optional: Enable **Web URL Integration** for latest market reports." },
+          "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": false }],
+          "parameters": [
+            { "key": "market", "label": "Market", "type": "text", "placeholder": "e.g., EV charging", "required": true },
+            { "key": "year", "label": "Base Year", "type": "number", "placeholder": "e.g., 2024", "required": true },
+            { "key": "growth", "label": "Growth Scenario", "type": "dropdown", "options": ["Low", "Base", "High"], "default": "Base", "required": false },
+            { "key": "currency", "label": "Currency", "type": "dropdown", "options": ["USD", "EUR", "GBP"], "default": "USD", "required": false }
+          ]
+        },
+        {
+          "id": "prompt-bottom-up-cohorts",
+          "name": "Bottom-Up Cohort Sizing",
+          "description": "Build cohort-based adoption and revenue stacks.",
+          "tags": ["sizing", "cohorts"],
+          "preview": { "markdown": "## Cohort Sizing\n- Define cohorts → adoption → ARPU → revenue.\n" },
+          "instructions": { "markdown": "Enable **Chart Rendering** for stacked area visuals." },
+          "settings": [{ "id": "tool-charts", "label": "Chart Rendering", "required": true }],
+          "parameters": [
+            { "key": "cohorts", "label": "Cohort Labels", "type": "text", "placeholder": "e.g., SMB, Mid, Ent", "required": false },
+            { "key": "start_year", "label": "Start Year", "type": "number", "placeholder": "e.g., 2023", "required": true },
+            { "key": "years", "label": "Projection Years", "type": "number", "placeholder": "e.g., 5", "required": true },
+            { "key": "arpu", "label": "ARPU (base)", "type": "number", "placeholder": "e.g., 1200", "required": false },
+            { "key": "seasonality", "label": "Seasonality", "type": "toggle", "default": false, "required": false },
+            { "key": "confidence", "label": "Confidence", "type": "dropdown", "options": ["Low", "Medium", "High"], "default": "Medium", "required": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat-customer-analysis",
+      "label": "Customer Analysis",
+      "description": "Acquisition, retention, and LTV diagnostics.",
+      "icon": "group",
+      "subcategories": [],
+      "prompts": [
+        {
+          "id": "prompt-ltv-driver-tree",
+          "name": "LTV Driver Tree",
+          "description": "Decompose LTV into acquisition, retention, and monetization levers.",
+          "tags": ["ltv", "retention", "monetization"],
+          "preview": { "markdown": "### LTV Driver Tree\n- Show levers, KPIs, and sensitivities.\n" },
+          "instructions": { "markdown": "No special tools required." },
+          "settings": [],
+          "parameters": [
+            { "key": "segment", "label": "Customer Segment", "type": "text", "placeholder": "e.g., Enterprise", "required": false },
+            { "key": "discount_rate", "label": "Discount Rate (%)", "type": "number", "placeholder": "e.g., 8", "required": false }
+          ]
+        },
+        {
+          "id": "prompt-churn-cohort",
+          "name": "Churn Cohort Table",
+          "description": "Visualize retention curves and cohort-based churn.",
+          "tags": ["churn", "retention", "cohorts"],
+          "preview": { "markdown": "## Cohort Retention\n- Month 0 to 24 retention table and curve.\n" },
+          "instructions": { "markdown": "Enable **Chart Rendering** for retention curves." },
+          "settings": [{ "id": "tool-charts", "label": "Chart Rendering", "required": true }],
+          "parameters": [
+            { "key": "cohort_start", "label": "Cohort Start (YYYY-MM)", "type": "text", "placeholder": "2024-01", "required": true },
+            { "key": "months", "label": "Months", "type": "number", "placeholder": "e.g., 24", "required": true },
+            { "key": "include_labels", "label": "Include Data Labels", "type": "toggle", "default": true, "required": false }
+          ]
+        },
+        {
+          "id": "prompt-csat-nps-summary",
+          "name": "CSAT & NPS Summary",
+          "description": "Summarize survey results and key drivers.",
+          "tags": ["csat", "nps", "voice-of-customer"],
+          "preview": { "markdown": "### CSAT & NPS Summary\n- Score distributions and verbatim themes.\n" },
+          "instructions": { "markdown": "Optional logging recommended for audit trail." },
+          "settings": [{ "id": "tool-logging", "label": "Source Conversation Logging", "required": false }],
+          "parameters": []
+        }
+      ]
+    }
+  ]
+}
