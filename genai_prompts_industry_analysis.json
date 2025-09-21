@@ -1,11 +1,12 @@
+
 {
-  "version": "1.0",
-  "lastUpdated": "2025-09-18",
+  "version": "1.2",
+  "lastUpdated": "2025-09-20",
   "categories": [
     {
       "id": "cat-industry-analysis",
       "label": "Industry Analysis",
-      "description": "Deep-dive analyses by industry frameworks.",
+      "description": "Deep-dive analyses by industry frameworks (MICS/PICS) and capital markets views.",
       "icon": "analytics",
       "subcategories": [
         {
@@ -17,59 +18,70 @@
             {
               "id": "prompt-capital-market-perspective",
               "name": "Capital Market Perspective",
-              "description": "Geo/industry composition, valuation multiples, and TSR performance.",
-              "tags": ["capital-markets", "valuation", "tsr"],
+              "description": "Geo/industry composition, valuation multiples, and TSR performance for a selected industry.",
+              "tags": [
+                "capital-markets",
+                "valuation",
+                "tsr"
+              ],
               "preview": {
-                "markdown": "# Capital Market Perspective\n\n**Analyses to Include**\n- Market Cap – Geo Composition\n- Market Cap – Industry Composition\n- TSR (Over Time)\n- P/E Forward (Over Time)\n- EV/EBITDA Forward (Over Time)\n- TSR (By Industry)\n- TSR (Quarterly By Industry)\n- TSR (WA vs Median)\n- P/E FY1 Multiples (WA vs Median)\n\n**Writing Rules**\n- Bold key numbers and periods.\n- Use (units) after each metric.\n- Bullet structure for scan-ability.\n"
+                "markdown": "## Capital Market Perspective\nInclude market cap composition, TSR, forward P/E and EV/EBITDA ranges."
               },
               "instructions": {
-                "markdown": "### Enable These Settings\n- Chart Rendering\n- Earnings Call Transcript Access\n- Web URL Integration\n- Source Conversation Logging\n- Agent Configuration\n\n> Tip: Use the **Instructions** tab to confirm tools are toggled before pressing *Use prompt*."
+                "markdown": "Prefer weighted-average plus median views; footnote data sources."
               },
               "settings": [
-                { "id": "tool-charts", "label": "Chart Rendering", "required": true },
-                { "id": "tool-earnings", "label": "Earnings Call Transcript Access", "required": false },
-                { "id": "tool-web", "label": "Web URL Integration", "required": true },
-                { "id": "tool-logging", "label": "Source Conversation Logging", "required": false },
-                { "id": "agent-config", "label": "Agent Configuration", "required": true }
+                {
+                  "id": "tool-web",
+                  "label": "Web URL Integration",
+                  "required": true
+                },
+                {
+                  "id": "tool-charts",
+                  "label": "Chart Rendering",
+                  "required": true
+                }
               ],
               "parameters": [
                 {
                   "key": "industry",
                   "label": "Industry",
                   "type": "text",
-                  "placeholder": "e.g., Semiconductors",
                   "required": true,
-                  "helpText": "Primary industry focus (free text or autocomplete)."
+                  "placeholder": "e.g., Semiconductors"
                 },
                 {
                   "key": "region",
                   "label": "Region",
                   "type": "dropdown",
-                  "options": ["Global", "North America", "EMEA", "APAC", "LATAM"],
-                  "default": "Global",
-                  "required": false
-                },
-                {
-                  "key": "time_horizon",
-                  "label": "Time Horizon",
-                  "type": "dropdown",
-                  "options": ["3Y", "5Y", "10Y"],
-                  "default": "5Y",
-                  "required": false
+                  "required": false,
+                  "options": [
+                    "Global",
+                    "North America",
+                    "EMEA",
+                    "APAC",
+                    "LATAM"
+                  ],
+                  "default": "Global"
                 },
                 {
                   "key": "benchmark",
                   "label": "Benchmark Index",
                   "type": "text",
-                  "placeholder": "e.g., S&P 500, MSCI ACWI",
-                  "required": false
+                  "required": false,
+                  "placeholder": "e.g., MSCI ACWI, S&P 500"
                 },
                 {
-                  "key": "include_earnings_refs",
-                  "label": "Include Earnings Call URLs",
-                  "type": "toggle",
-                  "default": false,
-                  "required": false
+                  "key": "window",
+                  "label": "Window",
+                  "type": "dropdown",
+                  "required": false,
+                  "options": [
+                    "1Y",
+                    "3Y",
+                    "5Y"
+                  ],
+                  "default": "3Y"
                 }
               ]
             },
@@ -129,7 +141,224 @@
           ]
         }
       ],
-      "prompts": []
+      "prompts": [
+        {
+          "id": "prompt-industry-perspective-mics-pics",
+          "name": "Industry Perspective (MICS / PICS)",
+          "description": "Summarize structure, profitability, growth, and transparency using MICS/PICS taxonomy.",
+          "tags": [
+            "MICS",
+            "PICS",
+            "industry-structure"
+          ],
+          "preview": {
+            "markdown": "### Industry Perspective (MICS/PICS)\n- Value chain & profit pools\n- KPI benchmarks\n- Change drivers"
+          },
+          "instructions": {
+            "markdown": "Highlight 5–7 KPIs that truly move valuation for this industry."
+          },
+          "settings": [
+            {
+              "id": "tool-web",
+              "label": "Web URL Integration",
+              "required": false
+            },
+            {
+              "id": "tool-charts",
+              "label": "Chart Rendering",
+              "required": true
+            }
+          ],
+          "parameters": [
+            {
+              "key": "industry",
+              "label": "Industry",
+              "type": "text",
+              "required": true,
+              "placeholder": "e.g., Payments"
+            },
+            {
+              "key": "perspective",
+              "label": "Perspective",
+              "type": "dropdown",
+              "required": false,
+              "options": [
+                "MICS",
+                "PICS"
+              ],
+              "default": "MICS"
+            },
+            {
+              "key": "include_case_studies",
+              "label": "Include Case Studies",
+              "type": "toggle",
+              "required": false,
+              "default": true
+            }
+          ]
+        },
+        {
+          "id": "prompt-industry-extra-01",
+          "name": "Capital Allocation",
+          "description": "Analyze how companies in an industry allocate capital between capex, R&D, M&A, and shareholder returns.",
+          "tags": ["capital-allocation", "capex", "m&a", "shareholder-returns"],
+          "preview": { "markdown": "### Capital Allocation Analysis\n- Breakdown of capital deployment (Capex, R&D, M&A)\n- Shareholder return patterns (dividends, buybacks)\n- Capital efficiency metrics (ROIC, CROCI)" },
+          "instructions": { "markdown": "Enable Web URL Integration to fetch the latest financial data. Use Chart Rendering for visualizations." },
+          "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }, { "id": "tool-charts", "label": "Chart Rendering", "required": true }],
+          "parameters": [
+            { "key": "industry", "label": "Industry", "type": "text", "placeholder": "e.g., Automotive", "required": true },
+            { "key": "region", "label": "Region", "type": "dropdown", "options": ["Global", "North America", "EMEA", "APAC"], "default": "Global", "required": false },
+            { "key": "time_horizon", "label": "Time Horizon", "type": "dropdown", "options": ["1Y", "3Y", "5Y"], "default": "3Y", "required": false }
+          ]
+        },
+        {
+            "id": "prompt-industry-extra-02",
+            "name": "Analyst Sentiment (Curated)",
+            "description": "Summarize curated analyst sentiment, including ratings distribution and price target trends for an industry.",
+            "tags": ["analyst-sentiment", "equity-research", "ratings", "industry"],
+            "preview": { "markdown": "### Industry Analyst Sentiment\n- Aggregate Buy/Hold/Sell distribution\n- Average price target and upside\n- Recent rating changes across the industry" },
+            "instructions": { "markdown": "Specify an industry to see aggregate sentiment. Results are based on a curated list of analysts." },
+            "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }],
+            "parameters": [
+                { "key": "industry", "label": "Industry", "type": "text", "placeholder": "e.g., Biotechnology", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-industry-extra-03",
+            "name": "Charting (Curated List)",
+            "description": "Generate a list of curated, presentation-ready charts for a given industry.",
+            "tags": ["charting", "visualization", "industry-analysis"],
+            "preview": { "markdown": "### Curated Industry Charts\n- Market Size & Growth\n- Profitability vs. Growth Matrix\n- Valuation Multiples vs. Peers" },
+            "instructions": { "markdown": "Enable Chart Rendering to generate the visuals. The list of charts is curated for maximum impact." },
+            "settings": [{ "id": "tool-charts", "label": "Chart Rendering", "required": true }],
+            "parameters": [
+                { "key": "industry", "label": "Industry", "type": "text", "placeholder": "e.g., SaaS", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-industry-extra-04",
+            "name": "Expectations",
+            "description": "Summarize consensus expectations for an industry's key performance indicators (KPIs).",
+            "tags": ["expectations", "consensus", "kpi", "industry"],
+            "preview": { "markdown": "### Industry Expectations\n- Consensus revenue growth estimates\n- Expected margin expansion/contraction\n- Key KPI forecasts (e.g., user growth, pricing)" },
+            "instructions": { "markdown": "Requires Web URL Integration to fetch the latest consensus data." },
+            "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }],
+            "parameters": [
+                { "key": "industry", "label": "Industry", "type": "text", "placeholder": "e.g., Airlines", "required": true },
+                { "key": "period", "label": "Period", "type": "dropdown", "options": ["Next Quarter", "Next Year", "Next 3 Years"], "default": "Next Year", "required": false }
+            ]
+        },
+        {
+            "id": "prompt-industry-extra-05",
+            "name": "Industry KPIs",
+            "description": "Identify and benchmark key performance indicators (KPIs) for a specific industry.",
+            "tags": ["kpi", "benchmarking", "industry-analysis"],
+            "preview": { "markdown": "### Key Industry KPIs\n- List of the most important KPIs for the industry\n- Benchmark values (e.g., top quartile, median)\n- Recent trends in KPI performance" },
+            "instructions": { "markdown": "This prompt provides a fundamental overview of what drives value in an industry." },
+            "settings": [],
+            "parameters": [
+                { "key": "industry", "label": "Industry", "type": "text", "placeholder": "e.g., Retail", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-industry-extra-06",
+            "name": "Multiples",
+            "description": "Analyze valuation multiples for an industry, including historical trends and peer comparisons.",
+            "tags": ["multiples", "valuation", "industry-analysis"],
+            "preview": { "markdown": "### Industry Valuation Multiples\n- Historical P/E, EV/EBITDA, and P/S ranges\n- Comparison vs. a benchmark index\n- Current multiples relative to history" },
+            "instructions": { "markdown": "Enable Chart Rendering for historical multiple charts." },
+            "settings": [{ "id": "tool-charts", "label": "Chart Rendering", "required": true }, { "id": "tool-web", "label": "Web URL Integration", "required": true }],
+            "parameters": [
+                { "key": "industry", "label": "Industry", "type": "text", "placeholder": "e.g., Medical Devices", "required": true },
+                { "key": "multiple_types", "label": "Multiple Types", "type": "multiselect", "options": ["P/E", "EV/EBITDA", "P/S", "P/B"], "default": ["P/E", "EV/EBITDA"], "required": false }
+            ]
+        },
+        {
+            "id": "prompt-industry-extra-07",
+            "name": "News & Trends",
+            "description": "Summarize the latest news and emerging trends affecting a given industry.",
+            "tags": ["news", "trends", "industry-analysis"],
+            "preview": { "markdown": "### Industry News & Trends\n- Key headlines from the last 30 days\n- Emerging technological, regulatory, or consumer trends\n- M&A activity and rumors" },
+            "instructions": { "markdown": "Requires Web URL Integration to scan for the latest news and articles." },
+            "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }],
+            "parameters": [
+                { "key": "industry", "label": "Industry", "type": "text", "placeholder": "e.g., FinTech", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-industry-extra-08",
+            "name": "Operating Performance",
+            "description": "Benchmark operating performance metrics like margins, efficiency, and growth across an industry.",
+            "tags": ["operating-performance", "benchmarking", "margins", "growth"],
+            "preview": { "markdown": "### Industry Operating Performance\n- Gross, operating, and net margin quartiles\n- Revenue growth vs. profitability matrix\n- Asset turnover and efficiency ratios" },
+            "instructions": { "markdown": "Use Chart Rendering to visualize the performance matrix." },
+            "settings": [{ "id": "tool-charts", "label": "Chart Rendering", "required": true }, { "id": "tool-web", "label": "Web URL Integration", "required": true }],
+            "parameters": [
+                { "key": "industry", "label": "Industry", "type": "text", "placeholder": "e.g., Logistics", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-industry-extra-09",
+            "name": "TSR",
+            "description": "Analyze Total Shareholder Return (TSR) for an industry and its key drivers.",
+            "tags": ["tsr", "total-shareholder-return", "industry-analysis"],
+            "preview": { "markdown": "### Industry TSR Analysis\n- De-composition of TSR into growth, margin, and multiple\n- TSR performance vs. peers and benchmark\n- Contribution of dividends and buybacks" },
+            "instructions": { "markdown": "Provides a deeper dive into the components of TSR than the standard perspective prompt." },
+            "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }],
+            "parameters": [
+                { "key": "industry", "label": "Industry", "type": "text", "placeholder": "e.g., Consumer Packaged Goods", "required": true },
+                { "key": "time_horizon", "label": "Time Horizon", "type": "dropdown", "options": ["1Y", "3Y", "5Y"], "default": "3Y", "required": false }
+            ]
+        },
+        {
+            "id": "prompt-industry-extra-10",
+            "name": "Analyst Sentiment",
+            "description": "Get a raw feed of analyst sentiment data for an industry, including individual ratings and price targets.",
+            "tags": ["analyst-sentiment", "raw-data", "industry"],
+            "preview": { "markdown": "### Raw Analyst Sentiment Data\n- Table of analyst ratings per company\n- Distribution of price targets\n- Recent upgrades and downgrades" },
+            "instructions": { "markdown": "This prompt provides un-curated, raw data for deeper analysis, contrasting with the curated sentiment prompt." },
+            "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }],
+            "parameters": [
+                { "key": "industry", "label": "Industry", "type": "text", "placeholder": "e.g., Telecommunications", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-industry-extra-11",
+            "name": "Industry Context",
+            "description": "Provide a high-level overview of an industry, including its size, major players, and value chain.",
+            "tags": ["industry-overview", "context", "value-chain"],
+            "preview": { "markdown": "### High-Level Industry Context\n- Market size and projected growth (CAGR)\n- Key segments and their descriptions\n- Top 5 players by market share" },
+            "instructions": { "markdown": "A good starting point for understanding a new industry." },
+            "settings": [],
+            "parameters": [
+                { "key": "industry", "label": "Industry", "type": "text", "placeholder": "e.g., Pharmaceuticals", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-industry-extra-12",
+            "name": "Industry Transparency",
+            "description": "Assess the level of financial and operational transparency in an industry.",
+            "tags": ["transparency", "disclosure", "reporting", "industry"],
+            "preview": { "markdown": "### Industry Transparency Scorecard\n- Commonality of KPI reporting\n- Quality of financial disclosures\n- Level of segment reporting detail" },
+            "instructions": { "markdown": "Helps in understanding the risks associated with information asymmetry in an industry." },
+            "settings": [],
+            "parameters": [
+                { "key": "industry", "label": "Industry", "type": "text", "placeholder": "e.g., Private Equity", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-industry-extra-13",
+            "name": "Market Cap",
+            "description": "Analyze the market capitalization distribution and trends for an industry.",
+            "tags": ["market-cap", "valuation", "industry-analysis"],
+            "preview": { "markdown": "### Industry Market Cap Analysis\n- Distribution of companies by market cap bucket\n- Historical evolution of total industry market cap\n- Concentration of market cap in top players" },
+            "instructions": { "markdown": "Enable Chart Rendering to visualize the distributions." },
+            "settings": [{ "id": "tool-charts", "label": "Chart Rendering", "required": true }, { "id": "tool-web", "label": "Web URL Integration", "required": true }],
+            "parameters": [
+                { "key": "industry", "label": "Industry", "type": "text", "placeholder": "e.g., Electric Vehicles", "required": true }
+            ]
+        }
+      ]
     },
     {
       "id": "cat-market-sizing",
@@ -215,6 +444,349 @@
           "instructions": { "markdown": "Optional logging recommended for audit trail." },
           "settings": [{ "id": "tool-logging", "label": "Source Conversation Logging", "required": false }],
           "parameters": []
+        }
+      ]
+    },
+    {
+      "id": "cat-complex-analysis",
+      "label": "Complex Analysis",
+      "description": "Structured deep-dives that synthesize qualitative and quantitative signals.",
+      "icon": "lightbulb",
+      "subcategories": [],
+      "prompts": [
+        {
+          "id": "prompt-value-thesis",
+          "name": "Value Thesis",
+          "description": "Articulate a concise yet rigorous investment thesis for a single company.",
+          "tags": [
+            "thesis",
+            "equity-research",
+            "strategy"
+          ],
+          "preview": {
+            "markdown": "### Value Thesis\n- Business model\n- Drivers & risks\n- Valuation and catalysts"
+          },
+          "instructions": {
+            "markdown": "Use bullet-led structure; bold key numbers."
+          },
+          "settings": [
+            {
+              "id": "tool-web",
+              "label": "Web URL Integration",
+              "required": false
+            },
+            {
+              "id": "tool-charts",
+              "label": "Chart Rendering",
+              "required": false
+            }
+          ],
+          "parameters": [
+            {
+              "key": "company_name",
+              "label": "Company name",
+              "type": "text",
+              "required": true,
+              "placeholder": "e.g., Nvidia"
+            },
+            {
+              "key": "peer_set",
+              "label": "Peer Set (comma-separated)",
+              "type": "text",
+              "required": false,
+              "placeholder": "e.g., AMD, Intel"
+            },
+            {
+              "key": "time_horizon",
+              "label": "Time Horizon",
+              "type": "dropdown",
+              "required": false,
+              "options": [
+                "6M",
+                "12M",
+                "24M"
+              ],
+              "default": "12M"
+            },
+            {
+              "key": "valuation_framework",
+              "label": "Valuation Framework",
+              "type": "dropdown",
+              "required": false,
+              "options": [
+                "Multiples",
+                "DCF",
+                "Both"
+              ],
+              "default": "Both"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat-analyst-themes",
+      "label": "Analyst Themes",
+      "description": "Prompts that summarize, cluster, and reflect street themes and expectations.",
+      "icon": "forum",
+      "subcategories": [],
+      "prompts": [
+        {
+          "id": "prompt-1y-analyst-themes",
+          "name": "1 Year Analyst Themes Categorization",
+          "description": "Cluster and label the last 12 months of analyst themes and narratives.",
+          "tags": [
+            "themes",
+            "nlp",
+            "curation"
+          ],
+          "preview": {
+            "markdown": "## 1Y Analyst Themes\n- Extract recurring topics, sentiment, and catalysts"
+          },
+          "instructions": {
+            "markdown": "Return a taxonomy (3–6 parent themes, 2–4 sub-themes each) with coverage ratios."
+          },
+          "settings": [
+            {
+              "id": "tool-web",
+              "label": "Web URL Integration",
+              "required": true
+            }
+          ],
+          "parameters": [
+            {
+              "key": "company_name",
+              "label": "Company name",
+              "type": "text",
+              "required": true,
+              "placeholder": "e.g., Shopify"
+            },
+            {
+              "key": "industry",
+              "label": "Industry",
+              "type": "text",
+              "required": true,
+              "placeholder": "e.g., E-commerce Platforms"
+            },
+            {
+              "key": "lookback",
+              "label": "Lookback",
+              "type": "dropdown",
+              "required": false,
+              "options": [
+                "6M",
+                "12M",
+                "24M"
+              ],
+              "default": "12M"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat-value-profile",
+      "label": "Value Profile",
+      "description": "Company-level facts, drivers, and qualitative context that shape value creation.",
+      "icon": "insights",
+      "subcategories": [],
+      "prompts": [
+        {
+            "id": "prompt-value-profile-01",
+            "name": "Earnings Calls",
+            "description": "Summarize key themes, management tone, and guidance from recent earnings calls.",
+            "tags": ["earnings-calls", "management-guidance", "nlp", "company"],
+            "preview": { "markdown": "### Earnings Call Summary\n- Key topics from prepared remarks\n- Q&A session highlights and sentiment analysis\n- Changes in guidance and outlook" },
+            "instructions": { "markdown": "Requires Earnings Call Transcript Access tool to be enabled." },
+            "settings": [{ "id": "tool-earnings", "label": "Earnings Call Transcript Access", "required": true }],
+            "parameters": [
+                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Apple", "required": true },
+                { "key": "lookback", "label": "Lookback Period", "type": "dropdown", "options": ["Last quarter", "Last 2 quarters", "Last 4 quarters"], "default": "Last 2 quarters", "required": false }
+            ]
+        },
+        {
+            "id": "prompt-value-profile-02",
+            "name": "Expert Guidance",
+            "description": "Synthesize guidance from a curated list of experts on a company's strategy and prospects.",
+            "tags": ["expert-opinion", "qualitative-analysis", "strategy", "company"],
+            "preview": { "markdown": "### Expert Guidance Synthesis\n- Summary of bull and bear cases from experts\n- Key debates and controversies\n- Quotes from influential analysts or industry leaders" },
+            "instructions": { "markdown": "This prompt uses a pre-defined set of expert sources." },
+            "settings": [],
+            "parameters": [
+                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Microsoft", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-value-profile-03",
+            "name": "Facts",
+            "description": "Generate a quick fact sheet for a company, including key financial and operating metrics.",
+            "tags": ["fact-sheet", "company-overview", "kpi"],
+            "preview": { "markdown": "### Company Fact Sheet\n- HQ, CEO, Year Founded\n- Key Financials (Revenue, EBITDA, Net Income)\n- Key Operating Metrics (e.g., Subscribers, MAU)" },
+            "instructions": { "markdown": "Provides a simple, scannable overview of a company." },
+            "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }],
+            "parameters": [
+                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Netflix", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-value-profile-04",
+            "name": "History",
+            "description": "Summarize a company's history, focusing on key strategic shifts and historical performance.",
+            "tags": ["company-history", "strategy", "performance"],
+            "preview": { "markdown": "### Company History\n- Founding and early years\n- Major strategic pivots and M&A\n- Stock performance since IPO" },
+            "instructions": { "markdown": "Provides important context for the company's current position." },
+            "settings": [],
+            "parameters": [
+                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Amazon", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-value-profile-05",
+            "name": "Industry Context",
+            "description": "Analyze the company's position within its industry context, including market share and competitive landscape.",
+            "tags": ["industry-analysis", "market-position", "competition", "company"],
+            "preview": { "markdown": "### Company's Industry Context\n- Estimated market share and rank\n- Key competitors and their strengths/weaknesses\n- Industry growth and trends" },
+            "instructions": { "markdown": "Connects the company-specific view to the broader industry picture." },
+            "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }],
+            "parameters": [
+                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Google", "required": true },
+                { "key": "industry", "label": "Industry", "type": "text", "placeholder": "e.g., Digital Advertising", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-value-profile-06",
+            "name": "People",
+            "description": "Provide an overview of the key executives and board members, including their backgrounds and tenure.",
+            "tags": ["management", "leadership", "board-of-directors", "company"],
+            "preview": { "markdown": "### Key People\n- Profile of the CEO (background, tenure, approval rating)\n- Overview of the executive team\n- Analysis of the board's composition and independence" },
+            "instructions": { "markdown": "Helps assess the quality and stability of the leadership team." },
+            "settings": [],
+            "parameters": [
+                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Meta", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-value-profile-07",
+            "name": "Quality Checklist",
+            "description": "Run a company through a predefined quality checklist, scoring it on various qualitative and quantitative factors.",
+            "tags": ["quality-investing", "checklist", "fundamental-analysis", "company"],
+            "preview": { "markdown": "### Investment Quality Checklist\n- Business Model Strength (Score: 8/10)\n- Management Quality (Score: 9/10)\n- Financial Health (Score: 7/10)" },
+            "instructions": { "markdown": "The checklist is based on common quality investing principles." },
+            "settings": [],
+            "parameters": [
+                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Johnson & Johnson", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-value-profile-08",
+            "name": "Segment analysis",
+            "description": "Break down a company's revenue and profitability by its reported business segments.",
+            "tags": ["segment-analysis", "revenue-breakdown", "profitability", "company"],
+            "preview": { "markdown": "### Business Segment Analysis\n- Revenue and growth by segment\n- Profitability (e.g., operating margin) by segment\n- Key products and services in each segment" },
+            "instructions": { "markdown": "Enable Chart Rendering to visualize the segment breakdown." },
+            "settings": [{ "id": "tool-charts", "label": "Chart Rendering", "required": true }, { "id": "tool-web", "label": "Web URL Integration", "required": true }],
+            "parameters": [
+                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Disney", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-value-profile-09",
+            "name": "TSR",
+            "description": "Analyze a company's Total Shareholder Return (TSR) and its drivers.",
+            "tags": ["tsr", "total-shareholder-return", "performance", "company"],
+            "preview": { "markdown": "### Company TSR Analysis\n- Historical TSR vs. peers and index\n- Decomposition of TSR into fundamental drivers\n- Impact of capital allocation on TSR" },
+            "instructions": { "markdown": "Provides a detailed look at the company's historical stock performance." },
+            "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }],
+            "parameters": [
+                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Starbucks", "required": true },
+                { "key": "peer_set", "label": "Peer Set (comma-separated)", "type": "text", "placeholder": "e.g., MCD, SBUX", "required": false },
+                { "key": "time_horizon", "label": "Time Horizon", "type": "dropdown", "options": ["1Y", "3Y", "5Y", "10Y"], "default": "5Y", "required": false }
+            ]
+        },
+        {
+            "id": "prompt-value-profile-10",
+            "name": "Business Model",
+            "description": "Describe and analyze a company's business model, including its revenue streams and value proposition.",
+            "tags": ["business-model", "strategy", "revenue-streams", "company"],
+            "preview": { "markdown": "### Business Model Canvas\n- Customer Segments\n- Value Proposition\n- Revenue Streams\n- Key Activities & Resources" },
+            "instructions": { "markdown": "Uses the Business Model Canvas framework for a structured overview." },
+            "settings": [],
+            "parameters": [
+                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Adobe", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-value-profile-11",
+            "name": "Capital Allocation",
+            "description": "Analyze a company's capital allocation strategy, including investments and shareholder returns.",
+            "tags": ["capital-allocation", "strategy", "shareholder-returns", "company"],
+            "preview": { "markdown": "### Capital Allocation Strategy\n- Capex and R&D as a % of sales\n- History of M&A and divestitures\n- Dividend and buyback policy and history" },
+            "instructions": { "markdown": "Helps to understand management's priorities and capital discipline." },
+            "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }],
+            "parameters": [
+                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Berkshire Hathaway", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-value-profile-12",
+            "name": "Expectations",
+            "description": "Summarize sell-side analyst expectations for a company's upcoming earnings and key metrics.",
+            "tags": ["expectations", "analyst-ratings", "earnings-preview", "company"],
+            "preview": { "markdown": "### Analyst Expectations\n- Consensus EPS and revenue estimates\n- 'Whisper numbers' if available\n- Key debates heading into the earnings print" },
+            "instructions": { "markdown": "Provides a snapshot of what the market is expecting." },
+            "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }],
+            "parameters": [
+                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Salesforce", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-value-profile-13",
+            "name": "Financial Health",
+            "description": "Assess a company's financial health using key balance sheet and cash flow metrics.",
+            "tags": ["financial-health", "balance-sheet", "cash-flow", "company"],
+            "preview": { "markdown": "### Financial Health Check\n- Leverage ratios (e.g., Debt/EBITDA)\n- Liquidity ratios (e.g., Current Ratio)\n- Cash flow generation and quality" },
+            "instructions": { "markdown": "Provides a quick assessment of financial risk." },
+            "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }],
+            "parameters": [
+                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Boeing", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-value-profile-14",
+            "name": "Operating KPIs",
+            "description": "Track and visualize a company's key non-financial operating KPIs over time.",
+            "tags": ["kpi", "operating-metrics", "tracking", "company"],
+            "preview": { "markdown": "### Operating KPI Tracker\n- Chart of Monthly Active Users (MAU)\n- Chart of Customer Acquisition Cost (CAC)\n- Table of other relevant KPIs" },
+            "instructions": { "markdown": "Enable Chart Rendering to visualize the KPI trends." },
+            "settings": [{ "id": "tool-charts", "label": "Chart Rendering", "required": true }, { "id": "tool-web", "label": "Web URL Integration", "required": true }],
+            "parameters": [
+                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Spotify", "required": true }
+            ]
+        },
+        {
+            "id": "prompt-value-profile-15",
+            "name": "Operating Performance",
+            "description": "Analyze a company's operating performance, including revenue growth, margins, and efficiency.",
+            "tags": ["operating-performance", "margins", "growth", "efficiency", "company"],
+            "preview": { "markdown": "### Operating Performance Review\n- Revenue growth decomposition\n- Gross, operating, and net margin trends\n- Return on invested capital (ROIC) analysis" },
+            "instructions": { "markdown": "A comprehensive look at how well the company is running its business." },
+            "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }],
+            "parameters": [
+                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Home Depot", "required": true },
+                { "key": "time_horizon", "label": "Time Horizon", "type": "dropdown", "options": ["Quarterly", "Annual"], "default": "Annual", "required": false }
+            ]
+        },
+        {
+            "id": "prompt-value-profile-16",
+            "name": "Value Drivers",
+            "description": "Identify and analyze the key drivers of value for a company.",
+            "tags": ["value-drivers", "fundamental-analysis", "strategy", "company"],
+            "preview": { "markdown": "### Key Value Drivers\n- Identification of the 3-5 most important value drivers\n- Sensitivity analysis of each driver on valuation\n- Discussion of the sustainability of each driver" },
+            "instructions": { "markdown": "Focuses on the most critical factors for the company's valuation." },
+            "settings": [],
+            "parameters": [
+                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Costco", "required": true }
+            ]
         }
       ]
     }
