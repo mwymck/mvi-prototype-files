@@ -211,7 +211,7 @@
           "name": "TAM/SAM/SOM (Top-Down)",
           "description": "Estimates market layers using public data and assumptions.",
           "tags": ["sizing", "strategy"],
-          "preview": { "markdown": "1. Define the Total Addressable Market (TAM) for the given `market`.\n2. Define the Serviceable Addressable Market (SAM) based on the target segment.\n3. Define the Serviceable Obtainable Market (SOM) based on realistic penetration assumptions.\n4. Provide a breakdown of the calculations and assumptions for each layer." },
+          "preview": { "markdown": "This prompt estimates the market size for a given product or service using the TAM, SAM, SOM framework.\n\n1.  **Total Addressable Market (TAM):** The prompt first defines the TAM, which represents the total market demand for a product or service.\n2.  **Serviceable Addressable Market (SAM):** Next, it narrows down to the SAM, which is the segment of the TAM targeted by the company's products and services which is within its geographical reach.\n3.  **Serviceable Obtainable Market (SOM):** Finally, it estimates the SOM, the portion of SAM that can be realistically captured.\n4.  **Assumptions and Breakdown:** The prompt provides a clear breakdown of the calculations and assumptions used at each stage, allowing for transparency and sensitivity analysis." },
           "instructions": { "markdown": "**How to use:**\nProvide a market and base year to estimate the TAM, SAM, and SOM.\n\n**Required Tools:**\n- Web Search" },
           "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": false }],
           "parameters": [
@@ -226,7 +226,7 @@
           "name": "Bottom-Up Cohort Sizing",
           "description": "Build cohort-based adoption and revenue stacks.",
           "tags": ["sizing", "cohorts"],
-          "preview": { "markdown": "1. Define customer `cohorts` based on the provided labels.\n2. Project the adoption rate for each cohort over the specified number of `years`.\n3. Apply the `arpu` (Average Revenue Per User) to the adopted users.\n4. Build a stacked revenue projection, optionally including `seasonality` effects." },
+          "preview": { "markdown": "This prompt builds a bottom-up market size model based on customer cohorts.\n\n1.  **Cohort Definition:** The model starts by defining distinct customer cohorts based on the provided labels.\n2.  **Adoption Projection:** It then projects the adoption rate for each cohort over a specified number of years, allowing for different growth assumptions.\n3.  **Revenue Calculation:** The prompt applies an Average Revenue Per User (ARPU) to the projected number of users in each cohort to calculate the revenue.\n4.  **Stacked Projections:** The final output is a stacked revenue projection that shows the contribution of each cohort to the total market size over time. It can also account for seasonality." },
           "instructions": { "markdown": "**How to use:**\nProvide cohort labels, projection years, and ARPU to build a bottom-up market size.\n\n**Required Tools:**\n- Charts\n- Math Extension" },
           "settings": [{ "id": "tool-charts", "label": "Chart Rendering", "required": true }],
           "parameters": [
@@ -252,7 +252,7 @@
           "name": "LTV Driver Tree",
           "description": "Decompose LTV into acquisition, retention, and monetization levers.",
           "tags": ["ltv", "retention", "monetization"],
-          "preview": { "markdown": "1. Decompose Lifetime Value (LTV) into its core components: acquisition, retention, and monetization.\n2. For each component, identify the key drivers and KPIs.\n3. Build a driver tree visualization showing the relationship between the components and the overall LTV.\n4. Include sensitivity analysis on the key drivers." },
+          "preview": { "markdown": "This prompt creates a driver tree for Customer Lifetime Value (LTV) to identify key levers and sensitivities.\n\n1.  **Decomposition:** The LTV formula is broken down into its fundamental components: customer acquisition, retention rates, and monetization (e.g., average revenue per user).\n2.  **KPI Identification:** For each component, the prompt identifies the key performance indicators (KPIs) that drive it. For example, retention might be driven by churn rate and renewal rate.\n3.  **Driver Tree Visualization:** The prompt then structures these components and KPIs into a hierarchical driver tree, showing how low-level metrics roll up to impact the ultimate LTV.\n4.  **Sensitivity Analysis:** Where possible, it includes a sensitivity analysis to show how a change in a specific driver (e.g., a 1% improvement in churn) would affect the overall LTV." },
           "instructions": { "markdown": "**How to use:**\nProvide a customer segment to generate an LTV driver tree.\n\n**Required Tools:**\n- Charts" },
           "settings": [],
           "parameters": [
@@ -265,7 +265,7 @@
           "name": "Churn Cohort Table",
           "description": "Visualize retention curves and cohort-based churn.",
           "tags": ["churn", "retention", "cohorts"],
-          "preview": { "markdown": "1. Create a cohort of users starting from `cohort_start`.\n2. Track the retention of this cohort over the specified number of `months`.\n3. Generate a cohort table showing the percentage of users retained each month.\n4. Visualize the data as a retention curve." },
+          "preview": { "markdown": "This prompt generates a cohort analysis to visualize customer churn and retention over time.\n\n1.  **Cohort Definition:** It first defines a cohort of new customers based on the `cohort_start` month.\n2.  **Retention Tracking:** The prompt then tracks this cohort over the subsequent number of `months`, calculating the percentage of customers who remain active in each period.\n3.  **Cohort Table:** The results are presented in a classic cohort table, with each row representing a cohort and each column representing a month since acquisition.\n4.  **Retention Curve:** Finally, it visualizes the data as a retention curve, which provides a clear graphical representation of how quickly churn occurs." },
           "instructions": { "markdown": "**How to use:**\nProvide a cohort start date and the number of months to track to generate a churn cohort analysis.\n\n**Required Tools:**\n- Charts" },
           "settings": [{ "id": "tool-charts", "label": "Chart Rendering", "required": true }],
           "parameters": [
@@ -279,7 +279,7 @@
           "name": "CSAT & NPS Summary",
           "description": "Summarize survey results and key drivers.",
           "tags": ["csat", "nps", "voice-of-customer"],
-          "preview": { "markdown": "1. Analyze the provided CSAT and NPS survey data.\n2. Calculate the overall scores and distributions.\n3. Use NLP to identify key themes and topics from customer verbatim feedback.\n4. Summarize the key drivers for both high and low scores." },
+          "preview": { "markdown": "This prompt analyzes customer survey data (CSAT/NPS) to summarize results and identify key drivers.\n\n1.  **Score Calculation:** It first calculates the headline CSAT and Net Promoter Score (NPS) from the raw survey data.\n2.  **Distribution Analysis:** The prompt then analyzes the distribution of scores (e.g., promoters, passives, detractors for NPS) to understand the spread of customer sentiment.\n3.  **Verbatim Analysis:** Using Natural Language Processing (NLP), it analyzes the open-ended verbatim feedback provided by customers to identify recurring themes, topics, and sentiment.\n4.  **Key Driver Summary:** Finally, it synthesizes the quantitative and qualitative data to summarize the key drivers of both satisfaction and dissatisfaction." },
           "instructions": { "markdown": "**How to use:**\nThis prompt works with customer survey data. Ensure the data is accessible.\n\n**Required Tools:**\n- Web Search (if data is in a URL)\n- Math Extension" },
           "settings": [{ "id": "tool-logging", "label": "Source Conversation Logging", "required": false }],
           "parameters": []
@@ -303,7 +303,7 @@
             "strategy"
           ],
           "preview": {
-            "markdown": "1. Run the \"Lookup Company Entity\" prompt from the library using \"{{.company_name}}\" as the company name parameter — do not use the entity resolution tool.\n2. If a company is found, fetch the reporting template and proceed as follows:\n\n- If the template is \"Bank\": run \"Value Thesis (Bank)\" from \"Bank\" subcategory, passing \"[Company Name] ([Company ID])\" as \"company_name\".\n\n- If the template is \"Non-Bank\": run \"Value Thesis (Non-Financial)\" from \"Non-Financial\" subcategory, passing \"[Company Name] ([Company ID])\" as \"company_name\".\n\n- If the template is \"Insurance\" return: \"The Value Thesis is currently unavailable for companies in the Insurance sector.\"\n\n3. If no match is found: inform the user that the company was not identified."
+            "markdown": "This prompt serves as a dispatcher to generate a detailed value thesis for a company, automatically selecting the correct sub-prompt based on the company's industry.\n\n1.  **Company Entity Lookup:** The prompt begins by running the \"Lookup Company Entity\" prompt to identify the correct company and its reporting template (e.g., Bank, Non-Bank, Insurance).\n2.  **Conditional Dispatch:** Based on the reporting template, the prompt proceeds as follows:\n    *   If the template is \"Bank\", it will run the \"Value Thesis (Bank)\" prompt from the \"Bank\" subcategory.\n    *   If the template is \"Non-Bank\", it will run the \"Value Thesis (Non-Financial)\" prompt from the \"Non-Financial\" subcategory.\n    *   If the template is \"Insurance\", it will return a message stating that the Value Thesis is currently unavailable for this sector.\n3.  **Background Execution:** The dispatched prompts are executed in the background without displaying any immediate output or confirmation, ensuring a seamless workflow.\n4.  **Error Handling:** If the initial company lookup fails, the user is informed that the company was not identified."
           },
           "instructions": {
             "markdown": "**How to use:**\nProvide a company name to generate a value thesis. This prompt will automatically dispatch to the correct sub-prompt based on the company's industry.\n\n**Required Tools:**\n- Company Screening"
@@ -380,7 +380,7 @@
             "curation"
           ],
           "preview": {
-            "markdown": "1. Gather analyst reports and commentary for the specified `company_name` over the last year.\n2. Use NLP to identify and cluster recurring themes and topics.\n3. Create a taxonomy of 3-6 parent themes with 2-4 sub-themes each.\n4. For each theme, provide a summary and calculate its coverage ratio (how often it's mentioned)."
+            "markdown": "This prompt analyzes analyst commentary over the last year to identify and categorize key investment themes.\n\n1.  **Data Collection:** It begins by gathering a comprehensive set of analyst reports, articles, and commentary related to the specified `company_name` over the chosen `lookback` period.\n2.  **NLP-Powered Clustering:** Using Natural Language Processing (NLP), the prompt analyzes the text to identify recurring topics, keywords, and concepts. It then clusters these into thematic groups.\n3.  **Taxonomy Generation:** Based on the clusters, it generates a structured taxonomy of 3-6 parent themes, each with 2-4 descriptive sub-themes. This provides a clear framework for understanding the key discussion points.\n4.  **Coverage Analysis:** For each identified theme, the prompt calculates a coverage ratio, indicating the percentage of analyst documents that mention the theme. This helps to quantify the importance and prevalence of each narrative in the market discussion."
           },
           "instructions": {
             "markdown": "**How to use:**\nProvide a company name and industry to categorize analyst themes over the last year.\n\n**Required Tools:**\n- News & Events\n- Filings & Publications\n- Web Search"
