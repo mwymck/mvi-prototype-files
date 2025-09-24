@@ -1,119 +1,140 @@
-{
-  "categories": [
-    {
-      "category-id": "data_research",
-      "category-name": "Data & Research",
-      "tools": [
-        {
-          "tool-id": "company_screening",
-          "tool-name": "Company Screening",
-          "description": "Access finding and filtering companies by customizable criteria such as industry, location, size, or financials.",
-          "default-enabled": true,
-          "disabled": false
-        },
-        {
-          "tool-id": "company_financials",
-          "tool-name": "Company Financials",
-          "description": "Access key financial data and metrics for specific companies (revenues, profit, etc.).",
-          "default-enabled": true,
-          "disabled": false
-        },
-        {
-          "tool-id": "industry_financials",
-          "tool-name": "Industry Financials",
-          "description": "Access aggregated financial statistics and benchmarks for entire industries or sectors.",
-          "default-enabled": true,
-          "disabled": false
-        },
-        {
-          "tool-id": "web_search",
-          "tool-name": "Web Search",
-          "description": "Search for public web information and recent online content about companies or industries.",
-          "default-enabled": true,
-          "disabled": false
-        }
-      ]
-    },
-    {
-      "category-id": "documents_reports",
-      "category-name": "Documents & Reports",
-      "tools": [
-        {
-          "tool-id": "transcripts_presentations",
-          "tool-name": "Transcripts & Presentations",
-          "description": "Access earnings call transcripts and review corporate presentations for detailed company insights.",
-          "default-enabled": true,
-          "disabled": false
-        },
-        {
-          "tool-id": "filings_publications",
-          "tool-name": "Filings & Publications",
-          "description": "Access annual reports, regulatory filings, and official company documents.",
-          "default-enabled": true,
-          "disabled": false
-        },
-        {
-          "tool-id": "news_events",
-          "tool-name": "News & Events",
-          "description": "Access the latest news articles, market updates, and important events affecting companies.",
-          "default-enabled": true,
-          "disabled": false
-        }
-      ]
-    },
-    {
-      "category-id": "company_intelligence",
-      "category-name": "Company Intelligence",
-      "tools": [
-        {
-          "tool-id": "people_org",
-          "tool-name": "People & Org",
-          "description": "See details about company leadership, organization structure, and workforce statistics.",
-          "default-enabled": true,
-          "disabled": false
-        },
-        {
-          "tool-id": "supply_chain",
-          "tool-name": "Supply Chain",
-          "description": "Access information on company supply chains, including suppliers, logistics relationships, and potential sourcing risks.",
-          "default-enabled": true,
-          "disabled": false
-        }
-      ]
-    },
-    {
-      "category-id": "output_visualization",
-      "category-name": "Output & Visualization",
-      "tools": [
-        {
-          "tool-id": "excel_export",
-          "tool-name": "Excel Export",
-          "description": "Enable downloading data as Excel files.",
-          "default-enabled": false,
-          "disabled": false
-        },
-        {
-          "tool-id": "charts",
-          "tool-name": "Charts",
-          "description": "Enable producing charts for analysis and presentations.",
-          "default-enabled": false,
-          "disabled": false
-        },
-        {
-          "tool-id": "math_extension",
-          "tool-name": "Math Extension",
-          "description": "Enhance accuracy of mathematical calculations.",
-          "default-enabled": false,
-          "disabled": false
-        },
-        {
-          "tool-id": "maps",
-          "tool-name": "Maps",
-          "description": "Create interactive maps using Google Maps.",
-          "default-enabled": false,
-          "disabled": true
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "model-name": "MVI Agent",
+    "model-id": "GPT-4.1",
+    "model-description": "Balanced speed, accuracy, and reliability",
+    "model-type": "primary"
+  },
+  {
+    "model-name": "Claude AI",
+    "model-id": "Claude 4 Sonnet",
+    "model-description": "Long-context precision and instruction fidelity",
+    "model-type": "primary"
+  },
+  {
+    "model-name": "Deep Analyst",
+    "model-id": "o3",
+    "model-description": "Cost efficient reasoning for everyday decisions",
+    "model-type": "primary"
+  },
+  {
+    "model-name": "Deep Analyst Pro",
+    "model-id": "o3 Pro",
+    "model-description": "Advanced reasoning for complex analysis",
+    "model-type": "primary"
+  },
+  {
+    "model-name": "Gemini AI",
+    "model-id": "Gemini 2.5 Pro",
+    "model-description": "Multimodal intelligence across text and vision",
+    "model-type": "primary"
+  },
+  {
+    "model-name": "ATE AI",
+    "model-id": null,
+    "model-description": "Extracts analyst statements from earnings call transcripts and categorizes them (Revenue, M&A, Product Portfolio, COGS, Management & Organization, SG&A, Capital Returns, CapEx, Macro).",
+    "model-type": "secondary"
+  },
+  {
+    "model-name": "Boosting Industry Perspectives",
+    "model-id": null,
+    "model-description": "Analyzes recent earnings/investor call Q&A across selected companies, surfaces cross-company themes, and outputs concise analytics tables for executives/boards.",
+    "model-type": "secondary"
+  },
+  {
+    "model-name": "CuratedThemer",
+    "model-id": null,
+    "model-description": "Generates and distributes relevant analyst themes to vertical/functional leaders to guide client activation.",
+    "model-type": "secondary"
+  },
+  {
+    "model-name": "EntityMatcher",
+    "model-id": null,
+    "model-description": "Agent specialized in identifying companies.",
+    "model-type": "secondary"
+  },
+  {
+    "model-name": "ESG adviser",
+    "model-id": null,
+    "model-description": "ESG insights and analyses across six dimensions: Materiality; KPIs and targets; ESG performance and benchmarking; Disclosures, ratings, awards, and memberships; ESG value generation; Operating model / org design.",
+    "model-type": "secondary"
+  },
+  {
+    "model-name": "EventWatch",
+    "model-id": null,
+    "model-description": "Monitors real-time news and corporate events (activism, executive changes, earnings, M&A, IPOs, reorganizations, product launches, and more) for timely, actionable insights.",
+    "model-type": "secondary"
+  },
+  {
+    "model-name": "GPT5 AI",
+    "model-id": "GPT-5",
+    "model-description": "Unified flagship, advanced safe reasoning.",
+    "model-type": "secondary"
+  },
+  {
+    "model-name": "Granularity of Growth",
+    "model-id": null,
+    "model-description": "Uses org data, financial data, and basic company financials to evaluate strategic positioning.",
+    "model-type": "secondary"
+  },
+  {
+    "model-name": "IndustryAnalyst",
+    "model-id": null,
+    "model-description": "Orchestrator of aggregator agents to run industry-level analyses.",
+    "model-type": "secondary"
+  },
+  {
+    "model-name": "IndustryAnalyst (Claude)",
+    "model-id": null,
+    "model-description": "Orchestrator of aggregator agents to run industry-level analyses.",
+    "model-type": "secondary"
+  },
+  {
+    "model-name": "MVI DataFetch",
+    "model-id": null,
+    "model-description": "Generates downloadable reports from company lists and financial metrics using MVIP Data Download capabilities.",
+    "model-type": "secondary"
+  },
+  {
+    "model-name": "MVI VaS",
+    "model-id": null,
+    "model-description": "Financial Value at Stake (VaS) model to estimate potential upside from specific levers backed by anecdotal evidence.",
+    "model-type": "secondary"
+  },
+  {
+    "model-name": "MVI VaS excel builder",
+    "model-id": null,
+    "model-description": "Excel builder for the MVI VaS model, used for deep research.",
+    "model-type": "secondary"
+  },
+  {
+    "model-name": "MVIA Open Chat",
+    "model-id": null,
+    "model-description": "Access to full company transcripts (earnings, guidance, analyst days, M&A, etc.) and SEC filings for deep research and due diligence.",
+    "model-type": "secondary"
+  },
+  {
+    "model-name": "Transcripter",
+    "model-id": null,
+    "model-description": "Provides company transcripts across multiple event types and access to filings for financial analysis and due diligence.",
+    "model-type": "secondary"
+  },
+  {
+    "model-name": "ValueAnalyst",
+    "model-id": null,
+    "model-description": "Outside-in value creation agent for industry.",
+    "model-type": "secondary"
+  },
+  {
+    "model-name": "ValueAnalyst Bank",
+    "model-id": null,
+    "model-description": "Outside-in value creation agent for banks.",
+    "model-type": "secondary"
+  },
+  {
+    "model-name": "Web AI",
+    "model-id": null,
+    "model-description": "Searches, retrieves, and summarizes information from the internet in real time; ideal for research and fact-checking.",
+    "model-type": "secondary"
+  }
+]
