@@ -35,6 +35,15 @@
   "Generate a 3-year profile of Costco\u2014financials, growth drivers, and risks.": {
     "type": "markdown",
     "id": "suggested-3",
+
+    "thinkingMs": 9000,
+    "thinkingScript": [
+  { "text": "Request refers to Costco Wholesale Corporation", "dur": "1.5s" },
+  { "text": "Using tools.", "dur": "1s" },
+  { "text": "Researching Costco: Most recent 3 year period", "dur": "2s" },
+  { "text": "Synthesizing response", "dur": "1.5s" }
+],
+
     "content": "# Costco: 3-Year Profile (2023\u20132025)\n\n## Financial Overview\n| Fiscal Year | Revenue ($B) | Net Income ($B) | EPS ($) | Comparable Sales Growth |\n|-------------|--------------|-----------------|---------|-------------------------|\n| 2023        | 242          | 6.2             | 14.1    | +7%                     |\n| 2024 (est.) | 258          | 6.7             | 15.0    | +5%                     |\n| 2025 (est.) | 272          | 7.1             | 15.8    | +4%                     |\n\n*Figures are approximate and directional.*\n\n---\n\n## Key Growth Drivers\n- **Membership Model**\n  - Renewal rates above *90%* in North America.\n  - Rising adoption of executive membership tier.\n- **Geographic Expansion**\n  - New warehouse openings in Asia and Europe.\n- **Private Label (Kirkland Signature)**\n  - ~30% of sales; higher margins & loyalty.\n- **Digital & Omnichannel**\n  - Online grocery, same-day delivery, B2B.\n\n---\n\n## Risks & Challenges\n1. **Macroeconomic Pressure**\n2. **Competition** (Amazon, Walmart, discounters)\n3. **Supply Chain & FX**\n4. **Membership Dependency**\n\n---\n\n## Outlook\n> Defensive retailer with resilient traffic & loyalty; modest growth expected over next three years."
   }
 }
