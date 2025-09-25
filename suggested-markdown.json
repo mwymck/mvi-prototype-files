@@ -21,7 +21,16 @@
   "Summarize recent news coverage regarding OpenAI's partnership with Microsoft.": {
     "type": "markdown",
     "id": "suggested-2",
-    "content": "# OpenAI \u00d7 Microsoft: Recent Coverage (Sept 2025)\n\n**What\u2019s new (last few days):**\n- **Tentative restructuring agreement**: <!-- chunk-break -->Reports<!-- chunk-break --> indicate OpenAI and Microsoft reached a *tentative* deal to change OpenAI\u2019s corporate setup, granting the nonprofit parent a very large equity stake while formalizing the long-term partnership; regulators are watching closely. \n- **Revenue-share shifts**: Reporting suggests OpenAI plans to reduce the cut of revenue shared with commercial partners (including Microsoft) over time, and the pair are renegotiating cloud economics.\n- **Potential larger Microsoft stake**: Coverage highlights that Microsoft could end up with roughly a **30\u201333%** equity position under the new structure, reframing its exposure from accounting liability to strategic asset.\n\n**Why it matters:**\n- Aligns financial incentives for continued Azure usage and model co-development.\n- Could ease governance tensions by clarifying economics and control rights.\n- Heightens antitrust and nonprofit-oversight scrutiny given the scale and structure.\n\n**Context & timeline (quick hits):**\n- 2019: Microsoft invests $1B and becomes OpenAI\u2019s preferred cloud (Azure).\n- 2023: Multi-billion expansion alongside ChatGPT rollout.\n- 2024: Periodic regulatory queries in US/EU/UK; board observer role comes and goes.\n- 2025 (Sept): Restructuring and stake headlines; revenue-share/infra cost talks surface.\n\n*Sources in prototype UI*"
+
+"thinkingMs": 8500,
+    "thinkingScript": [
+  { "text": "Researching OpenAI and Microsoft", "dur": "4s" },
+  { "text": "Using tools.", "dur": "1s" },
+  { "text": "Understanding the OpenAI / Microsoft partnership", "dur": "2s" },
+  { "text": "Synthesizing response", "dur": "1.5s" }
+],
+    
+    "content": "# OpenAI \u00d7 Microsoft: Recent Coverage (Sept 2025)\n\n**What\u2019s new (last few days):**\n- **Tentative restructuring agreement**: Reports indicate OpenAI and Microsoft reached a *tentative* deal to change OpenAI\u2019s corporate setup, granting the nonprofit parent a very large equity stake while formalizing the long-term partnership; regulators are watching closely. \n- **Revenue-share shifts**: Reporting suggests OpenAI plans to reduce the cut of revenue shared with commercial partners (including Microsoft) over time, and the pair are renegotiating cloud economics.\n- **Potential larger Microsoft stake**: Coverage highlights that Microsoft could end up with roughly a **30\u201333%** equity position under the new structure, reframing its exposure from accounting liability to strategic asset.\n\n**Why it matters:**\n- Aligns financial incentives for continued Azure usage and model co-development.\n- Could ease governance tensions by clarifying economics and control rights.\n- Heightens antitrust and nonprofit-oversight scrutiny given the scale and structure.\n\n**Context & timeline (quick hits):**\n- 2019: Microsoft invests $1B and becomes OpenAI\u2019s preferred cloud (Azure).\n- 2023: Multi-billion expansion alongside ChatGPT rollout.\n- 2024: Periodic regulatory queries in US/EU/UK; board observer role comes and goes.\n- 2025 (Sept): Restructuring and stake headlines; revenue-share/infra cost talks surface.\n\n*Sources in prototype UI*"
   },
   "Generate a 3-year profile of Costco\u2014financials, growth drivers, and risks.": {
     "type": "markdown",
