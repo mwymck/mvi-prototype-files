@@ -1,4 +1,3 @@
-
 {
   "version": "1.3",
   "lastUpdated": "2025-09-20",
@@ -89,11 +88,22 @@
               "id": "prompt-industry-perspective-quick",
               "name": "Industry Perspective (Quick)",
               "description": "Fast snapshot of industry composition and relative performance.",
-              "tags": ["industry", "snapshot"],
-              "preview": { "markdown": "1. Based on the provided industry, pull key metrics for the top 5 companies by market cap.\n2. Generate a snapshot including:\n    - Geo & industry composition\n    - Headline TSR & multiples (P/E, EV/EBITDA)." },
-              "instructions": { "markdown": "**How to use:**\nProvide an industry to get a quick snapshot of its composition and performance.\n\n**Required Tools:**\n- Industry Financials\n- Web Search" },
+              "tags": [
+                "industry",
+                "snapshot"
+              ],
+              "preview": {
+                "markdown": "1. Based on the provided industry, pull key metrics for the top 5 companies by market cap.\n2. Generate a snapshot including:\n    - Geo & industry composition\n    - Headline TSR & multiples (P/E, EV/EBITDA)."
+              },
+              "instructions": {
+                "markdown": "**How to use:**\nProvide an industry to get a quick snapshot of its composition and performance.\n\n**Required Tools:**\n- Industry Financials\n- Web Search"
+              },
               "settings": [
-                { "id": "tool-web", "label": "Web URL Integration", "required": true }
+                {
+                  "id": "tool-web",
+                  "label": "Web URL Integration",
+                  "required": true
+                }
               ],
               "parameters": []
             }
@@ -109,23 +119,46 @@
               "id": "prompt-tsr-by-industry",
               "name": "TSR by Industry",
               "description": "Compare TSR by sub-industry and quartiles.",
-              "tags": ["tsr", "comparative"],
-              "preview": { "markdown": "1. For the selected `subindustries` and `window`, gather TSR data.\n2. Rank the sub-industries by TSR.\n3. Generate a chart showing the TSR for each sub-industry, with quartile bands if possible.\n4. If `normalize` is true, compare against a major index." },
-              "instructions": { "markdown": "**How to use:**\nSelect the sub-industries and time window to compare their Total Shareholder Return.\n\n**Required Tools:**\n- Industry Financials\n- Charts" },
-              "settings": [{ "id": "tool-charts", "label": "Chart Rendering", "required": true }],
+              "tags": [
+                "tsr",
+                "comparative"
+              ],
+              "preview": {
+                "markdown": "1. For the selected `subindustries` and `window`, gather TSR data.\n2. Rank the sub-industries by TSR.\n3. Generate a chart showing the TSR for each sub-industry, with quartile bands if possible.\n4. If `normalize` is true, compare against a major index."
+              },
+              "instructions": {
+                "markdown": "**How to use:**\nSelect the sub-industries and time window to compare their Total Shareholder Return.\n\n**Required Tools:**\n- Industry Financials\n- Charts"
+              },
+              "settings": [
+                {
+                  "id": "tool-charts",
+                  "label": "Chart Rendering",
+                  "required": true
+                }
+              ],
               "parameters": [
                 {
                   "key": "subindustries",
                   "label": "Sub-Industries",
                   "type": "multiselect",
-                  "options": ["Software", "Semiconductors", "IT Services", "Hardware", "Internet"],
+                  "options": [
+                    "Software",
+                    "Semiconductors",
+                    "IT Services",
+                    "Hardware",
+                    "Internet"
+                  ],
                   "required": false
                 },
                 {
                   "key": "window",
                   "label": "Window",
                   "type": "dropdown",
-                  "options": ["1Y", "3Y", "5Y"],
+                  "options": [
+                    "1Y",
+                    "3Y",
+                    "5Y"
+                  ],
                   "default": "3Y",
                   "required": true
                 },
@@ -210,32 +243,133 @@
           "id": "prompt-tam-sam-som",
           "name": "TAM/SAM/SOM (Top-Down)",
           "description": "Estimates market layers using public data and assumptions.",
-          "tags": ["sizing", "strategy"],
-          "preview": { "markdown": "This prompt estimates the market size for a given product or service using the TAM, SAM, SOM framework.\n\n1.  **Total Addressable Market (TAM):** The prompt first defines the TAM, which represents the total market demand for a product or service.\n2.  **Serviceable Addressable Market (SAM):** Next, it narrows down to the SAM, which is the segment of the TAM targeted by the company's products and services which is within its geographical reach.\n3.  **Serviceable Obtainable Market (SOM):** Finally, it estimates the SOM, the portion of SAM that can be realistically captured.\n4.  **Assumptions and Breakdown:** The prompt provides a clear breakdown of the calculations and assumptions used at each stage, allowing for transparency and sensitivity analysis." },
-          "instructions": { "markdown": "**How to use:**\nProvide a market and base year to estimate the TAM, SAM, and SOM.\n\n**Required Tools:**\n- Web Search" },
-          "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": false }],
+          "tags": [
+            "sizing",
+            "strategy"
+          ],
+          "preview": {
+            "markdown": "This prompt estimates the market size for a given product or service using the TAM, SAM, SOM framework.\n\n1.  **Total Addressable Market (TAM):** The prompt first defines the TAM, which represents the total market demand for a product or service.\n2.  **Serviceable Addressable Market (SAM):** Next, it narrows down to the SAM, which is the segment of the TAM targeted by the company's products and services which is within its geographical reach.\n3.  **Serviceable Obtainable Market (SOM):** Finally, it estimates the SOM, the portion of SAM that can be realistically captured.\n4.  **Assumptions and Breakdown:** The prompt provides a clear breakdown of the calculations and assumptions used at each stage, allowing for transparency and sensitivity analysis."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide a market and base year to estimate the TAM, SAM, and SOM.\n\n**Required Tools:**\n- Web Search"
+          },
+          "settings": [
+            {
+              "id": "tool-web",
+              "label": "Web URL Integration",
+              "required": false
+            }
+          ],
           "parameters": [
-            { "key": "market", "label": "Market", "type": "text", "placeholder": "e.g., EV charging", "required": true },
-            { "key": "year", "label": "Base Year", "type": "number", "placeholder": "e.g., 2024", "required": true },
-            { "key": "growth", "label": "Growth Scenario", "type": "dropdown", "options": ["Low", "Base", "High"], "default": "Base", "required": false },
-            { "key": "currency", "label": "Currency", "type": "dropdown", "options": ["USD", "EUR", "GBP"], "default": "USD", "required": false }
+            {
+              "key": "market",
+              "label": "Market",
+              "type": "text",
+              "placeholder": "e.g., EV charging",
+              "required": true
+            },
+            {
+              "key": "year",
+              "label": "Base Year",
+              "type": "number",
+              "placeholder": "e.g., 2024",
+              "required": true
+            },
+            {
+              "key": "growth",
+              "label": "Growth Scenario",
+              "type": "dropdown",
+              "options": [
+                "Low",
+                "Base",
+                "High"
+              ],
+              "default": "Base",
+              "required": false
+            },
+            {
+              "key": "currency",
+              "label": "Currency",
+              "type": "dropdown",
+              "options": [
+                "USD",
+                "EUR",
+                "GBP"
+              ],
+              "default": "USD",
+              "required": false
+            }
           ]
         },
         {
           "id": "prompt-bottom-up-cohorts",
           "name": "Bottom-Up Cohort Sizing",
           "description": "Build cohort-based adoption and revenue stacks.",
-          "tags": ["sizing", "cohorts"],
-          "preview": { "markdown": "This prompt builds a bottom-up market size model based on customer cohorts.\n\n1.  **Cohort Definition:** The model starts by defining distinct customer cohorts based on the provided labels.\n2.  **Adoption Projection:** It then projects the adoption rate for each cohort over a specified number of years, allowing for different growth assumptions.\n3.  **Revenue Calculation:** The prompt applies an Average Revenue Per User (ARPU) to the projected number of users in each cohort to calculate the revenue.\n4.  **Stacked Projections:** The final output is a stacked revenue projection that shows the contribution of each cohort to the total market size over time. It can also account for seasonality." },
-          "instructions": { "markdown": "**How to use:**\nProvide cohort labels, projection years, and ARPU to build a bottom-up market size.\n\n**Required Tools:**\n- Charts\n- Math Extension" },
-          "settings": [{ "id": "tool-charts", "label": "Chart Rendering", "required": true }],
+          "tags": [
+            "sizing",
+            "cohorts"
+          ],
+          "preview": {
+            "markdown": "This prompt builds a bottom-up market size model based on customer cohorts.\n\n1.  **Cohort Definition:** The model starts by defining distinct customer cohorts based on the provided labels.\n2.  **Adoption Projection:** It then projects the adoption rate for each cohort over a specified number of years, allowing for different growth assumptions.\n3.  **Revenue Calculation:** The prompt applies an Average Revenue Per User (ARPU) to the projected number of users in each cohort to calculate the revenue.\n4.  **Stacked Projections:** The final output is a stacked revenue projection that shows the contribution of each cohort to the total market size over time. It can also account for seasonality."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide cohort labels, projection years, and ARPU to build a bottom-up market size.\n\n**Required Tools:**\n- Charts\n- Math Extension"
+          },
+          "settings": [
+            {
+              "id": "tool-charts",
+              "label": "Chart Rendering",
+              "required": true
+            }
+          ],
           "parameters": [
-            { "key": "cohorts", "label": "Cohort Labels", "type": "text", "placeholder": "e.g., SMB, Mid, Ent", "required": false },
-            { "key": "start_year", "label": "Start Year", "type": "number", "placeholder": "e.g., 2023", "required": true },
-            { "key": "years", "label": "Projection Years", "type": "number", "placeholder": "e.g., 5", "required": true },
-            { "key": "arpu", "label": "ARPU (base)", "type": "number", "placeholder": "e.g., 1200", "required": false },
-            { "key": "seasonality", "label": "Seasonality", "type": "toggle", "default": false, "required": false },
-            { "key": "confidence", "label": "Confidence", "type": "dropdown", "options": ["Low", "Medium", "High"], "default": "Medium", "required": false }
+            {
+              "key": "cohorts",
+              "label": "Cohort Labels",
+              "type": "text",
+              "placeholder": "e.g., SMB, Mid, Ent",
+              "required": false
+            },
+            {
+              "key": "start_year",
+              "label": "Start Year",
+              "type": "number",
+              "placeholder": "e.g., 2023",
+              "required": true
+            },
+            {
+              "key": "years",
+              "label": "Projection Years",
+              "type": "number",
+              "placeholder": "e.g., 5",
+              "required": true
+            },
+            {
+              "key": "arpu",
+              "label": "ARPU (base)",
+              "type": "number",
+              "placeholder": "e.g., 1200",
+              "required": false
+            },
+            {
+              "key": "seasonality",
+              "label": "Seasonality",
+              "type": "toggle",
+              "default": false,
+              "required": false
+            },
+            {
+              "key": "confidence",
+              "label": "Confidence",
+              "type": "dropdown",
+              "options": [
+                "Low",
+                "Medium",
+                "High"
+              ],
+              "default": "Medium",
+              "required": false
+            }
           ]
         }
       ]
@@ -251,37 +385,103 @@
           "id": "prompt-ltv-driver-tree",
           "name": "LTV Driver Tree",
           "description": "Decompose LTV into acquisition, retention, and monetization levers.",
-          "tags": ["ltv", "retention", "monetization"],
-          "preview": { "markdown": "This prompt creates a driver tree for Customer Lifetime Value (LTV) to identify key levers and sensitivities.\n\n1.  **Decomposition:** The LTV formula is broken down into its fundamental components: customer acquisition, retention rates, and monetization (e.g., average revenue per user).\n2.  **KPI Identification:** For each component, the prompt identifies the key performance indicators (KPIs) that drive it. For example, retention might be driven by churn rate and renewal rate.\n3.  **Driver Tree Visualization:** The prompt then structures these components and KPIs into a hierarchical driver tree, showing how low-level metrics roll up to impact the ultimate LTV.\n4.  **Sensitivity Analysis:** Where possible, it includes a sensitivity analysis to show how a change in a specific driver (e.g., a 1% improvement in churn) would affect the overall LTV." },
-          "instructions": { "markdown": "**How to use:**\nProvide a customer segment to generate an LTV driver tree.\n\n**Required Tools:**\n- Charts" },
+          "tags": [
+            "ltv",
+            "retention",
+            "monetization"
+          ],
+          "preview": {
+            "markdown": "This prompt creates a driver tree for Customer Lifetime Value (LTV) to identify key levers and sensitivities.\n\n1.  **Decomposition:** The LTV formula is broken down into its fundamental components: customer acquisition, retention rates, and monetization (e.g., average revenue per user).\n2.  **KPI Identification:** For each component, the prompt identifies the key performance indicators (KPIs) that drive it. For example, retention might be driven by churn rate and renewal rate.\n3.  **Driver Tree Visualization:** The prompt then structures these components and KPIs into a hierarchical driver tree, showing how low-level metrics roll up to impact the ultimate LTV.\n4.  **Sensitivity Analysis:** Where possible, it includes a sensitivity analysis to show how a change in a specific driver (e.g., a 1% improvement in churn) would affect the overall LTV."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide a customer segment to generate an LTV driver tree.\n\n**Required Tools:**\n- Charts"
+          },
           "settings": [],
           "parameters": [
-            { "key": "segment", "label": "Customer Segment", "type": "text", "placeholder": "e.g., Enterprise", "required": false },
-            { "key": "discount_rate", "label": "Discount Rate (%)", "type": "number", "placeholder": "e.g., 8", "required": false }
+            {
+              "key": "segment",
+              "label": "Customer Segment",
+              "type": "text",
+              "placeholder": "e.g., Enterprise",
+              "required": false
+            },
+            {
+              "key": "discount_rate",
+              "label": "Discount Rate (%)",
+              "type": "number",
+              "placeholder": "e.g., 8",
+              "required": false
+            }
           ]
         },
         {
           "id": "prompt-churn-cohort",
           "name": "Churn Cohort Table",
           "description": "Visualize retention curves and cohort-based churn.",
-          "tags": ["churn", "retention", "cohorts"],
-          "preview": { "markdown": "This prompt generates a cohort analysis to visualize customer churn and retention over time.\n\n1.  **Cohort Definition:** It first defines a cohort of new customers based on the `cohort_start` month.\n2.  **Retention Tracking:** The prompt then tracks this cohort over the subsequent number of `months`, calculating the percentage of customers who remain active in each period.\n3.  **Cohort Table:** The results are presented in a classic cohort table, with each row representing a cohort and each column representing a month since acquisition.\n4.  **Retention Curve:** Finally, it visualizes the data as a retention curve, which provides a clear graphical representation of how quickly churn occurs." },
-          "instructions": { "markdown": "**How to use:**\nProvide a cohort start date and the number of months to track to generate a churn cohort analysis.\n\n**Required Tools:**\n- Charts" },
-          "settings": [{ "id": "tool-charts", "label": "Chart Rendering", "required": true }],
+          "tags": [
+            "churn",
+            "retention",
+            "cohorts"
+          ],
+          "preview": {
+            "markdown": "This prompt generates a cohort analysis to visualize customer churn and retention over time.\n\n1.  **Cohort Definition:** It first defines a cohort of new customers based on the `cohort_start` month.\n2.  **Retention Tracking:** The prompt then tracks this cohort over the subsequent number of `months`, calculating the percentage of customers who remain active in each period.\n3.  **Cohort Table:** The results are presented in a classic cohort table, with each row representing a cohort and each column representing a month since acquisition.\n4.  **Retention Curve:** Finally, it visualizes the data as a retention curve, which provides a clear graphical representation of how quickly churn occurs."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide a cohort start date and the number of months to track to generate a churn cohort analysis.\n\n**Required Tools:**\n- Charts"
+          },
+          "settings": [
+            {
+              "id": "tool-charts",
+              "label": "Chart Rendering",
+              "required": true
+            }
+          ],
           "parameters": [
-            { "key": "cohort_start", "label": "Cohort Start (YYYY-MM)", "type": "text", "placeholder": "2024-01", "required": true },
-            { "key": "months", "label": "Months", "type": "number", "placeholder": "e.g., 24", "required": true },
-            { "key": "include_labels", "label": "Include Data Labels", "type": "toggle", "default": true, "required": false }
+            {
+              "key": "cohort_start",
+              "label": "Cohort Start (YYYY-MM)",
+              "type": "text",
+              "placeholder": "2024-01",
+              "required": true
+            },
+            {
+              "key": "months",
+              "label": "Months",
+              "type": "number",
+              "placeholder": "e.g., 24",
+              "required": true
+            },
+            {
+              "key": "include_labels",
+              "label": "Include Data Labels",
+              "type": "toggle",
+              "default": true,
+              "required": false
+            }
           ]
         },
         {
           "id": "prompt-csat-nps-summary",
           "name": "CSAT & NPS Summary",
           "description": "Summarize survey results and key drivers.",
-          "tags": ["csat", "nps", "voice-of-customer"],
-          "preview": { "markdown": "This prompt analyzes customer survey data (CSAT/NPS) to summarize results and identify key drivers.\n\n1.  **Score Calculation:** It first calculates the headline CSAT and Net Promoter Score (NPS) from the raw survey data.\n2.  **Distribution Analysis:** The prompt then analyzes the distribution of scores (e.g., promoters, passives, detractors for NPS) to understand the spread of customer sentiment.\n3.  **Verbatim Analysis:** Using Natural Language Processing (NLP), it analyzes the open-ended verbatim feedback provided by customers to identify recurring themes, topics, and sentiment.\n4.  **Key Driver Summary:** Finally, it synthesizes the quantitative and qualitative data to summarize the key drivers of both satisfaction and dissatisfaction." },
-          "instructions": { "markdown": "**How to use:**\nThis prompt works with customer survey data. Ensure the data is accessible.\n\n**Required Tools:**\n- Web Search (if data is in a URL)\n- Math Extension" },
-          "settings": [{ "id": "tool-logging", "label": "Source Conversation Logging", "required": false }],
+          "tags": [
+            "csat",
+            "nps",
+            "voice-of-customer"
+          ],
+          "preview": {
+            "markdown": "This prompt analyzes customer survey data (CSAT/NPS) to summarize results and identify key drivers.\n\n1.  **Score Calculation:** It first calculates the headline CSAT and Net Promoter Score (NPS) from the raw survey data.\n2.  **Distribution Analysis:** The prompt then analyzes the distribution of scores (e.g., promoters, passives, detractors for NPS) to understand the spread of customer sentiment.\n3.  **Verbatim Analysis:** Using Natural Language Processing (NLP), it analyzes the open-ended verbatim feedback provided by customers to identify recurring themes, topics, and sentiment.\n4.  **Key Driver Summary:** Finally, it synthesizes the quantitative and qualitative data to summarize the key drivers of both satisfaction and dissatisfaction."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nThis prompt works with customer survey data. Ensure the data is accessible.\n\n**Required Tools:**\n- Web Search (if data is in a URL)\n- Math Extension"
+          },
+          "settings": [
+            {
+              "id": "tool-logging",
+              "label": "Source Conversation Logging",
+              "required": false
+            }
+          ],
           "parameters": []
         }
       ]
@@ -431,201 +631,555 @@
       "subcategories": [],
       "prompts": [
         {
-            "id": "prompt-value-profile-01",
-            "name": "Earnings Calls",
-            "description": "Summarize key themes, management tone, and guidance from recent earnings calls.",
-            "tags": ["earnings-calls", "management-guidance", "nlp", "company"],
-            "preview": { "markdown": "1. Access the transcripts for the specified company's earnings calls for the lookback period.\n2. Summarize key topics from the prepared remarks section.\n3. Analyze the Q&A session for key themes and sentiment.\n4. Extract any changes in management guidance and outlook." },
-            "instructions": { "markdown": "**How to use:**\nProvide a company name to summarize its recent earnings calls.\n\n**Required Tools:**\n- Transcripts & Presentations" },
-            "settings": [{ "id": "tool-earnings", "label": "Earnings Call Transcript Access", "required": true }],
-            "parameters": [
-                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Apple", "required": true },
-                { "key": "lookback", "label": "Lookback Period", "type": "dropdown", "options": ["Last quarter", "Last 2 quarters", "Last 4 quarters"], "default": "Last 2 quarters", "required": false }
-            ]
+          "id": "prompt-value-profile-01",
+          "name": "Earnings Calls",
+          "description": "Summarize key themes, management tone, and guidance from recent earnings calls.",
+          "tags": [
+            "earnings-calls",
+            "management-guidance",
+            "nlp",
+            "company"
+          ],
+          "preview": {
+            "markdown": "1. Access the transcripts for the specified company's earnings calls for the lookback period.\n2. Summarize key topics from the prepared remarks section.\n3. Analyze the Q&A session for key themes and sentiment.\n4. Extract any changes in management guidance and outlook."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide a company name to summarize its recent earnings calls.\n\n**Required Tools:**\n- Transcripts & Presentations"
+          },
+          "settings": [
+            {
+              "id": "tool-earnings",
+              "label": "Earnings Call Transcript Access",
+              "required": true
+            }
+          ],
+          "parameters": [
+            {
+              "key": "company",
+              "label": "Company",
+              "type": "text",
+              "placeholder": "e.g., Apple",
+              "required": true
+            },
+            {
+              "key": "lookback",
+              "label": "Lookback Period",
+              "type": "dropdown",
+              "options": [
+                "Last quarter",
+                "Last 2 quarters",
+                "Last 4 quarters"
+              ],
+              "default": "Last 2 quarters",
+              "required": false
+            }
+          ]
         },
         {
-            "id": "prompt-value-profile-02",
-            "name": "Expert Guidance",
-            "description": "Synthesize guidance from a curated list of experts on a company's strategy and prospects.",
-            "tags": ["expert-opinion", "qualitative-analysis", "strategy", "company"],
-            "preview": { "markdown": "1. Identify a curated list of industry experts and influential analysts for the specified company.\n2. Gather their recent commentary, reports, and interviews.\n3. Synthesize the bull and bear cases for the company.\n4. Extract key quotes and summarize major debates." },
-            "instructions": { "markdown": "**How to use:**\nProvide a company name to get a synthesis of expert opinions. The list of experts is pre-defined.\n\n**Required Tools:**\n- Web Search\n- News & Events" },
-            "settings": [],
-            "parameters": [
-                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Microsoft", "required": true }
-            ]
+          "id": "prompt-value-profile-02",
+          "name": "Expert Guidance",
+          "description": "Synthesize guidance from a curated list of experts on a company's strategy and prospects.",
+          "tags": [
+            "expert-opinion",
+            "qualitative-analysis",
+            "strategy",
+            "company"
+          ],
+          "preview": {
+            "markdown": "1. Identify a curated list of industry experts and influential analysts for the specified company.\n2. Gather their recent commentary, reports, and interviews.\n3. Synthesize the bull and bear cases for the company.\n4. Extract key quotes and summarize major debates."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide a company name to get a synthesis of expert opinions. The list of experts is pre-defined.\n\n**Required Tools:**\n- Web Search\n- News & Events"
+          },
+          "settings": [],
+          "parameters": [
+            {
+              "key": "company",
+              "label": "Company",
+              "type": "text",
+              "placeholder": "e.g., Microsoft",
+              "required": true
+            }
+          ]
         },
         {
-            "id": "prompt-value-profile-03",
-            "name": "Facts",
-            "description": "Generate a quick fact sheet for a company, including key financial and operating metrics.",
-            "tags": ["fact-sheet", "company-overview", "kpi"],
-            "preview": { "markdown": "1. Fetch key company information: HQ, CEO, Year Founded.\n2. Retrieve key financials for the last fiscal year (Revenue, EBITDA, Net Income).\n3. Gather key operating metrics (e.g., Subscribers, Monthly Active Users).\n4. Present the information in a clear, scannable fact sheet format." },
-            "instructions": { "markdown": "**How to use:**\nProvide a company name to generate a quick fact sheet.\n\n**Required Tools:**\n- Company Financials\n- Web Search" },
-            "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }],
-            "parameters": [
-                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Netflix", "required": true }
-            ]
+          "id": "prompt-value-profile-03",
+          "name": "Facts",
+          "description": "Generate a quick fact sheet for a company, including key financial and operating metrics.",
+          "tags": [
+            "fact-sheet",
+            "company-overview",
+            "kpi"
+          ],
+          "preview": {
+            "markdown": "1. Fetch key company information: HQ, CEO, Year Founded.\n2. Retrieve key financials for the last fiscal year (Revenue, EBITDA, Net Income).\n3. Gather key operating metrics (e.g., Subscribers, Monthly Active Users).\n4. Present the information in a clear, scannable fact sheet format."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide a company name to generate a quick fact sheet.\n\n**Required Tools:**\n- Company Financials\n- Web Search"
+          },
+          "settings": [
+            {
+              "id": "tool-web",
+              "label": "Web URL Integration",
+              "required": true
+            }
+          ],
+          "parameters": [
+            {
+              "key": "company",
+              "label": "Company",
+              "type": "text",
+              "placeholder": "e.g., Netflix",
+              "required": true
+            }
+          ]
         },
         {
-            "id": "prompt-value-profile-04",
-            "name": "History",
-            "description": "Summarize a company's history, focusing on key strategic shifts and historical performance.",
-            "tags": ["company-history", "strategy", "performance"],
-            "preview": { "markdown": "1. Research the company's founding and early years.\n2. Identify and describe major strategic pivots, acquisitions, and divestitures.\n3. Summarize the company's stock performance since its IPO, noting key milestones.\n4. Provide a narrative of the company's evolution." },
-            "instructions": { "markdown": "**How to use:**\nProvide a company name to get a summary of its history.\n\n**Required Tools:**\n- Web Search\n- News & Events" },
-            "settings": [],
-            "parameters": [
-                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Amazon", "required": true }
-            ]
+          "id": "prompt-value-profile-04",
+          "name": "History",
+          "description": "Summarize a company's history, focusing on key strategic shifts and historical performance.",
+          "tags": [
+            "company-history",
+            "strategy",
+            "performance"
+          ],
+          "preview": {
+            "markdown": "1. Research the company's founding and early years.\n2. Identify and describe major strategic pivots, acquisitions, and divestitures.\n3. Summarize the company's stock performance since its IPO, noting key milestones.\n4. Provide a narrative of the company's evolution."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide a company name to get a summary of its history.\n\n**Required Tools:**\n- Web Search\n- News & Events"
+          },
+          "settings": [],
+          "parameters": [
+            {
+              "key": "company",
+              "label": "Company",
+              "type": "text",
+              "placeholder": "e.g., Amazon",
+              "required": true
+            }
+          ]
         },
         {
-            "id": "prompt-value-profile-05",
-            "name": "Industry Context",
-            "description": "Analyze the company's position within its industry context, including market share and competitive landscape.",
-            "tags": ["industry-analysis", "market-position", "competition", "company"],
-            "preview": { "markdown": "1. For the given company and industry, estimate the company's market share and rank.\n2. Identify the key competitors.\n3. Analyze the strengths and weaknesses of the company relative to its competitors.\n4. Summarize the key industry trends affecting the company." },
-            "instructions": { "markdown": "**How to use:**\nProvide a company and its industry to analyze its competitive position.\n\n**Required Tools:**\n- Industry Financials\n- Company Financials\n- Web Search" },
-            "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }],
-            "parameters": [
-                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Google", "required": true },
-                { "key": "industry", "label": "Industry", "type": "text", "placeholder": "e.g., Digital Advertising", "required": true }
-            ]
+          "id": "prompt-value-profile-05",
+          "name": "Industry Context",
+          "description": "Analyze the company's position within its industry context, including market share and competitive landscape.",
+          "tags": [
+            "industry-analysis",
+            "market-position",
+            "competition",
+            "company"
+          ],
+          "preview": {
+            "markdown": "1. For the given company and industry, estimate the company's market share and rank.\n2. Identify the key competitors.\n3. Analyze the strengths and weaknesses of the company relative to its competitors.\n4. Summarize the key industry trends affecting the company."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide a company and its industry to analyze its competitive position.\n\n**Required Tools:**\n- Industry Financials\n- Company Financials\n- Web Search"
+          },
+          "settings": [
+            {
+              "id": "tool-web",
+              "label": "Web URL Integration",
+              "required": true
+            }
+          ],
+          "parameters": [
+            {
+              "key": "company",
+              "label": "Company",
+              "type": "text",
+              "placeholder": "e.g., Google",
+              "required": true
+            },
+            {
+              "key": "industry",
+              "label": "Industry",
+              "type": "text",
+              "placeholder": "e.g., Digital Advertising",
+              "required": true
+            }
+          ]
         },
         {
-            "id": "prompt-value-profile-06",
-            "name": "People",
-            "description": "Provide an overview of the key executives and board members, including their backgrounds and tenure.",
-            "tags": ["management", "leadership", "board-of-directors", "company"],
-            "preview": { "markdown": "1. Identify the current CEO and key executives of the specified company.\n2. Provide a brief background and tenure for each key executive.\n3. Analyze the composition of the board of directors, noting independence and tenure.\n4. Summarize any recent significant changes in leadership." },
-            "instructions": { "markdown": "**How to use:**\nProvide a company name to get an overview of its leadership.\n\n**Required Tools:**\n- People & Org\n- Web Search" },
-            "settings": [],
-            "parameters": [
-                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Meta", "required": true }
-            ]
+          "id": "prompt-value-profile-06",
+          "name": "People",
+          "description": "Provide an overview of the key executives and board members, including their backgrounds and tenure.",
+          "tags": [
+            "management",
+            "leadership",
+            "board-of-directors",
+            "company"
+          ],
+          "preview": {
+            "markdown": "1. Identify the current CEO and key executives of the specified company.\n2. Provide a brief background and tenure for each key executive.\n3. Analyze the composition of the board of directors, noting independence and tenure.\n4. Summarize any recent significant changes in leadership."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide a company name to get an overview of its leadership.\n\n**Required Tools:**\n- People & Org\n- Web Search"
+          },
+          "settings": [],
+          "parameters": [
+            {
+              "key": "company",
+              "label": "Company",
+              "type": "text",
+              "placeholder": "e.g., Meta",
+              "required": true
+            }
+          ]
         },
         {
-            "id": "prompt-value-profile-07",
-            "name": "Quality Checklist",
-            "description": "Run a company through a predefined quality checklist, scoring it on various qualitative and quantitative factors.",
-            "tags": ["quality-investing", "checklist", "fundamental-analysis", "company"],
-            "preview": { "markdown": "1. Assess the company against a predefined checklist of quality indicators.\n2. Score the company on factors like Business Model Strength, Management Quality, and Financial Health.\n3. Provide a summary of the rationale for each score.\n4. Calculate an overall quality score." },
-            "instructions": { "markdown": "**How to use:**\nProvide a company name to assess its quality based on a standard checklist.\n\n**Required Tools:**\n- Company Financials\n- Web Search" },
-            "settings": [],
-            "parameters": [
-                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Johnson & Johnson", "required": true }
-            ]
+          "id": "prompt-value-profile-07",
+          "name": "Quality Checklist",
+          "description": "Run a company through a predefined quality checklist, scoring it on various qualitative and quantitative factors.",
+          "tags": [
+            "quality-investing",
+            "checklist",
+            "fundamental-analysis",
+            "company"
+          ],
+          "preview": {
+            "markdown": "1. Assess the company against a predefined checklist of quality indicators.\n2. Score the company on factors like Business Model Strength, Management Quality, and Financial Health.\n3. Provide a summary of the rationale for each score.\n4. Calculate an overall quality score."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide a company name to assess its quality based on a standard checklist.\n\n**Required Tools:**\n- Company Financials\n- Web Search"
+          },
+          "settings": [],
+          "parameters": [
+            {
+              "key": "company",
+              "label": "Company",
+              "type": "text",
+              "placeholder": "e.g., Johnson & Johnson",
+              "required": true
+            }
+          ]
         },
         {
-            "id": "prompt-value-profile-08",
-            "name": "Segment analysis",
-            "description": "Break down a company's revenue and profitability by its reported business segments.",
-            "tags": ["segment-analysis", "revenue-breakdown", "profitability", "company"],
-            "preview": { "markdown": "1. Identify the company's reported business segments.\n2. For each segment, extract revenue and growth for the last 3 years.\n3. Extract profitability (e.g., operating margin) for each segment.\n4. Visualize the breakdown of revenue and profit by segment." },
-            "instructions": { "markdown": "**How to use:**\nProvide a company name to analyze its business segments.\n\n**Required Tools:**\n- Company Financials\n- Filings & Publications\n- Charts" },
-            "settings": [{ "id": "tool-charts", "label": "Chart Rendering", "required": true }, { "id": "tool-web", "label": "Web URL Integration", "required": true }],
-            "parameters": [
-                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Disney", "required": true }
-            ]
+          "id": "prompt-value-profile-08",
+          "name": "Segment analysis",
+          "description": "Break down a company's revenue and profitability by its reported business segments.",
+          "tags": [
+            "segment-analysis",
+            "revenue-breakdown",
+            "profitability",
+            "company"
+          ],
+          "preview": {
+            "markdown": "1. Identify the company's reported business segments.\n2. For each segment, extract revenue and growth for the last 3 years.\n3. Extract profitability (e.g., operating margin) for each segment.\n4. Visualize the breakdown of revenue and profit by segment."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide a company name to analyze its business segments.\n\n**Required Tools:**\n- Company Financials\n- Filings & Publications\n- Charts"
+          },
+          "settings": [
+            {
+              "id": "tool-charts",
+              "label": "Chart Rendering",
+              "required": true
+            },
+            {
+              "id": "tool-web",
+              "label": "Web URL Integration",
+              "required": true
+            }
+          ],
+          "parameters": [
+            {
+              "key": "company",
+              "label": "Company",
+              "type": "text",
+              "placeholder": "e.g., Disney",
+              "required": true
+            }
+          ]
         },
         {
-            "id": "prompt-value-profile-09",
-            "name": "TSR",
-            "description": "Analyze a company's Total Shareholder Return (TSR) and its drivers.",
-            "tags": ["tsr", "total-shareholder-return", "performance", "company"],
-            "preview": { "markdown": "1. Calculate the company's TSR over the specified `time_horizon`.\n2. Benchmark the TSR against the `peer_set` and a major index.\n3. Decompose the TSR into its fundamental drivers (growth, margin change, multiple change).\n4. Analyze the impact of capital allocation (buybacks, dividends) on TSR." },
-            "instructions": { "markdown": "**How to use:**\nProvide a company name and optionally a peer set and time horizon to analyze its TSR.\n\n**Required Tools:**\n- Company Financials\n- Web Search" },
-            "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }],
-            "parameters": [
-                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Starbucks", "required": true },
-                { "key": "peer_set", "label": "Peer Set (comma-separated)", "type": "text", "placeholder": "e.g., MCD, SBUX", "required": false },
-                { "key": "time_horizon", "label": "Time Horizon", "type": "dropdown", "options": ["1Y", "3Y", "5Y", "10Y"], "default": "5Y", "required": false }
-            ]
+          "id": "prompt-value-profile-09",
+          "name": "TSR",
+          "description": "Analyze a company's Total Shareholder Return (TSR) and its drivers.",
+          "tags": [
+            "tsr",
+            "total-shareholder-return",
+            "performance",
+            "company"
+          ],
+          "preview": {
+            "markdown": "1. Calculate the company's TSR over the specified `time_horizon`.\n2. Benchmark the TSR against the `peer_set` and a major index.\n3. Decompose the TSR into its fundamental drivers (growth, margin change, multiple change).\n4. Analyze the impact of capital allocation (buybacks, dividends) on TSR."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide a company name and optionally a peer set and time horizon to analyze its TSR.\n\n**Required Tools:**\n- Company Financials\n- Web Search"
+          },
+          "settings": [
+            {
+              "id": "tool-web",
+              "label": "Web URL Integration",
+              "required": true
+            }
+          ],
+          "parameters": [
+            {
+              "key": "company",
+              "label": "Company",
+              "type": "text",
+              "placeholder": "e.g., Starbucks",
+              "required": true
+            },
+            {
+              "key": "peer_set",
+              "label": "Peer Set (comma-separated)",
+              "type": "text",
+              "placeholder": "e.g., MCD, SBUX",
+              "required": false
+            },
+            {
+              "key": "time_horizon",
+              "label": "Time Horizon",
+              "type": "dropdown",
+              "options": [
+                "1Y",
+                "3Y",
+                "5Y",
+                "10Y"
+              ],
+              "default": "5Y",
+              "required": false
+            }
+          ]
         },
         {
-            "id": "prompt-value-profile-10",
-            "name": "Business Model",
-            "description": "Describe and analyze a company's business model, including its revenue streams and value proposition.",
-            "tags": ["business-model", "strategy", "revenue-streams", "company"],
-            "preview": { "markdown": "1. Using the Business Model Canvas framework, describe the company's business model.\n2. Detail the Customer Segments, Value Proposition, and Revenue Streams.\n3. Outline the Key Activities, Resources, and Partnerships.\n4. Analyze the cost structure and competitive advantages." },
-            "instructions": { "markdown": "**How to use:**\nProvide a company name to generate a Business Model Canvas.\n\n**Required Tools:**\n- Web Search\n- Filings & Publications" },
-            "settings": [],
-            "parameters": [
-                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Adobe", "required": true }
-            ]
+          "id": "prompt-value-profile-10",
+          "name": "Business Model",
+          "description": "Describe and analyze a company's business model, including its revenue streams and value proposition.",
+          "tags": [
+            "business-model",
+            "strategy",
+            "revenue-streams",
+            "company"
+          ],
+          "preview": {
+            "markdown": "1. Using the Business Model Canvas framework, describe the company's business model.\n2. Detail the Customer Segments, Value Proposition, and Revenue Streams.\n3. Outline the Key Activities, Resources, and Partnerships.\n4. Analyze the cost structure and competitive advantages."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide a company name to generate a Business Model Canvas.\n\n**Required Tools:**\n- Web Search\n- Filings & Publications"
+          },
+          "settings": [],
+          "parameters": [
+            {
+              "key": "company",
+              "label": "Company",
+              "type": "text",
+              "placeholder": "e.g., Adobe",
+              "required": true
+            }
+          ]
         },
         {
-            "id": "prompt-value-profile-11",
-            "name": "Capital Allocation",
-            "description": "Analyze a company's capital allocation strategy, including investments and shareholder returns.",
-            "tags": ["capital-allocation", "strategy", "shareholder-returns", "company"],
-            "preview": { "markdown": "1. Analyze the company's historical capital allocation decisions.\n2. Detail Capex and R&D as a percentage of sales over the last 5 years.\n3. Summarize the history of M&A and divestitures.\n4. Describe the dividend and buyback policy and its history." },
-            "instructions": { "markdown": "**How to use:**\nProvide a company name to analyze its capital allocation strategy.\n\n**Required Tools:**\n- Company Financials\n- Filings & Publications" },
-            "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }],
-            "parameters": [
-                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Berkshire Hathaway", "required": true }
-            ]
+          "id": "prompt-value-profile-11",
+          "name": "Capital Allocation",
+          "description": "Analyze a company's capital allocation strategy, including investments and shareholder returns.",
+          "tags": [
+            "capital-allocation",
+            "strategy",
+            "shareholder-returns",
+            "company"
+          ],
+          "preview": {
+            "markdown": "1. Analyze the company's historical capital allocation decisions.\n2. Detail Capex and R&D as a percentage of sales over the last 5 years.\n3. Summarize the history of M&A and divestitures.\n4. Describe the dividend and buyback policy and its history."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide a company name to analyze its capital allocation strategy.\n\n**Required Tools:**\n- Company Financials\n- Filings & Publications"
+          },
+          "settings": [
+            {
+              "id": "tool-web",
+              "label": "Web URL Integration",
+              "required": true
+            }
+          ],
+          "parameters": [
+            {
+              "key": "company",
+              "label": "Company",
+              "type": "text",
+              "placeholder": "e.g., Berkshire Hathaway",
+              "required": true
+            }
+          ]
         },
         {
-            "id": "prompt-value-profile-12",
-            "name": "Expectations",
-            "description": "Summarize sell-side analyst expectations for a company's upcoming earnings and key metrics.",
-            "tags": ["expectations", "analyst-ratings", "earnings-preview", "company"],
-            "preview": { "markdown": "1. Gather consensus analyst estimates for the company's upcoming earnings release (EPS, revenue).\n2. Identify any available \"whisper numbers\" or unofficial expectations.\n3. Summarize the key debates and questions that analysts are focused on.\n4. Provide a preview of what to look for in the earnings report." },
-            "instructions": { "markdown": "**How to use:**\nProvide a company name to get a summary of analyst expectations for its next earnings release.\n\n**Required Tools:**\n- News & Events\n- Web Search" },
-            "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }],
-            "parameters": [
-                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Salesforce", "required": true }
-            ]
+          "id": "prompt-value-profile-12",
+          "name": "Expectations",
+          "description": "Summarize sell-side analyst expectations for a company's upcoming earnings and key metrics.",
+          "tags": [
+            "expectations",
+            "analyst-ratings",
+            "earnings-preview",
+            "company"
+          ],
+          "preview": {
+            "markdown": "1. Gather consensus analyst estimates for the company's upcoming earnings release (EPS, revenue).\n2. Identify any available \"whisper numbers\" or unofficial expectations.\n3. Summarize the key debates and questions that analysts are focused on.\n4. Provide a preview of what to look for in the earnings report."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide a company name to get a summary of analyst expectations for its next earnings release.\n\n**Required Tools:**\n- News & Events\n- Web Search"
+          },
+          "settings": [
+            {
+              "id": "tool-web",
+              "label": "Web URL Integration",
+              "required": true
+            }
+          ],
+          "parameters": [
+            {
+              "key": "company",
+              "label": "Company",
+              "type": "text",
+              "placeholder": "e.g., Salesforce",
+              "required": true
+            }
+          ]
         },
         {
-            "id": "prompt-value-profile-13",
-            "name": "Financial Health",
-            "description": "Assess a company's financial health using key balance sheet and cash flow metrics.",
-            "tags": ["financial-health", "balance-sheet", "cash-flow", "company"],
-            "preview": { "markdown": "1. Analyze the company's balance sheet to assess its leverage (e.g., Debt/EBITDA ratio).\n2. Evaluate the company's liquidity position (e.g., Current Ratio, Quick Ratio).\n3. Analyze the company's cash flow statements to assess the quality and sustainability of its cash generation.\n4. Provide an overall assessment of the company's financial health." },
-            "instructions": { "markdown": "**How to use:**\nProvide a company name to get a quick assessment of its financial health.\n\n**Required Tools:**\n- Company Financials" },
-            "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }],
-            "parameters": [
-                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Boeing", "required": true }
-            ]
+          "id": "prompt-value-profile-13",
+          "name": "Financial Health",
+          "description": "Assess a company's financial health using key balance sheet and cash flow metrics.",
+          "tags": [
+            "financial-health",
+            "balance-sheet",
+            "cash-flow",
+            "company"
+          ],
+          "preview": {
+            "markdown": "1. Analyze the company's balance sheet to assess its leverage (e.g., Debt/EBITDA ratio).\n2. Evaluate the company's liquidity position (e.g., Current Ratio, Quick Ratio).\n3. Analyze the company's cash flow statements to assess the quality and sustainability of its cash generation.\n4. Provide an overall assessment of the company's financial health."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide a company name to get a quick assessment of its financial health.\n\n**Required Tools:**\n- Company Financials"
+          },
+          "settings": [
+            {
+              "id": "tool-web",
+              "label": "Web URL Integration",
+              "required": true
+            }
+          ],
+          "parameters": [
+            {
+              "key": "company",
+              "label": "Company",
+              "type": "text",
+              "placeholder": "e.g., Boeing",
+              "required": true
+            }
+          ]
         },
         {
-            "id": "prompt-value-profile-14",
-            "name": "Operating KPIs",
-            "description": "Track and visualize a company's key non-financial operating KPIs over time.",
-            "tags": ["kpi", "operating-metrics", "tracking", "company"],
-            "preview": { "markdown": "1. Identify the most important non-financial KPIs for the company.\n2. Gather historical data for these KPIs.\n3. Generate charts to visualize the trends in these KPIs over time.\n4. Provide a summary of the key insights from the KPI trends." },
-            "instructions": { "markdown": "**How to use:**\nProvide a company name to track its key operating KPIs.\n\n**Required Tools:**\n- Company Financials\n- Filings & Publications\n- Charts" },
-            "settings": [{ "id": "tool-charts", "label": "Chart Rendering", "required": true }, { "id": "tool-web", "label": "Web URL Integration", "required": true }],
-            "parameters": [
-                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Spotify", "required": true }
-            ]
+          "id": "prompt-value-profile-14",
+          "name": "Operating KPIs",
+          "description": "Track and visualize a company's key non-financial operating KPIs over time.",
+          "tags": [
+            "kpi",
+            "operating-metrics",
+            "tracking",
+            "company"
+          ],
+          "preview": {
+            "markdown": "1. Identify the most important non-financial KPIs for the company.\n2. Gather historical data for these KPIs.\n3. Generate charts to visualize the trends in these KPIs over time.\n4. Provide a summary of the key insights from the KPI trends."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide a company name to track its key operating KPIs.\n\n**Required Tools:**\n- Company Financials\n- Filings & Publications\n- Charts"
+          },
+          "settings": [
+            {
+              "id": "tool-charts",
+              "label": "Chart Rendering",
+              "required": true
+            },
+            {
+              "id": "tool-web",
+              "label": "Web URL Integration",
+              "required": true
+            }
+          ],
+          "parameters": [
+            {
+              "key": "company",
+              "label": "Company",
+              "type": "text",
+              "placeholder": "e.g., Spotify",
+              "required": true
+            }
+          ]
         },
         {
-            "id": "prompt-value-profile-15",
-            "name": "Operating Performance",
-            "description": "Analyze a company's operating performance, including revenue growth, margins, and efficiency.",
-            "tags": ["operating-performance", "margins", "growth", "efficiency", "company"],
-            "preview": { "markdown": "1. Analyze the company's revenue growth over the last 5 years, decomposing it by source if possible.\n2. Track the trends in gross, operating, and net margins.\n3. Evaluate the company's operating efficiency and return on invested capital (ROIC).\n4. Provide a summary of the company's overall operating performance." },
-            "instructions": { "markdown": "**How to use:**\nProvide a company name to get a comprehensive analysis of its operating performance.\n\n**Required Tools:**\n- Company Financials" },
-            "settings": [{ "id": "tool-web", "label": "Web URL Integration", "required": true }],
-            "parameters": [
-                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Home Depot", "required": true },
-                { "key": "time_horizon", "label": "Time Horizon", "type": "dropdown", "options": ["Quarterly", "Annual"], "default": "Annual", "required": false }
-            ]
+          "id": "prompt-value-profile-15",
+          "name": "Operating Performance",
+          "description": "Analyze a company's operating performance, including revenue growth, margins, and efficiency.",
+          "tags": [
+            "operating-performance",
+            "margins",
+            "growth",
+            "efficiency",
+            "company"
+          ],
+          "preview": {
+            "markdown": "1. Analyze the company's revenue growth over the last 5 years, decomposing it by source if possible.\n2. Track the trends in gross, operating, and net margins.\n3. Evaluate the company's operating efficiency and return on invested capital (ROIC).\n4. Provide a summary of the company's overall operating performance."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide a company name to get a comprehensive analysis of its operating performance.\n\n**Required Tools:**\n- Company Financials"
+          },
+          "settings": [
+            {
+              "id": "tool-web",
+              "label": "Web URL Integration",
+              "required": true
+            }
+          ],
+          "parameters": [
+            {
+              "key": "company",
+              "label": "Company",
+              "type": "text",
+              "placeholder": "e.g., Home Depot",
+              "required": true
+            },
+            {
+              "key": "time_horizon",
+              "label": "Time Horizon",
+              "type": "dropdown",
+              "options": [
+                "Quarterly",
+                "Annual"
+              ],
+              "default": "Annual",
+              "required": false
+            }
+          ]
         },
         {
-            "id": "prompt-value-profile-16",
-            "name": "Value Drivers",
-            "description": "Identify and analyze the key drivers of value for a company.",
-            "tags": ["value-drivers", "fundamental-analysis", "strategy", "company"],
-            "preview": { "markdown": "1. Identify the 3-5 most important drivers of value for the company.\n2. For each driver, explain why it is important and how it impacts the company's value.\n3. Analyze the sustainability and potential risks for each value driver.\n4. Conduct a sensitivity analysis to show how changes in the drivers would affect the company's valuation." },
-            "instructions": { "markdown": "**How to use:**\nProvide a company name to identify and analyze its key value drivers.\n\n**Required Tools:**\n- Company Financials\n- Web Search\n- Math Extension" },
-            "settings": [],
-            "parameters": [
-                { "key": "company", "label": "Company", "type": "text", "placeholder": "e.g., Costco", "required": true }
-            ]
+          "id": "prompt-value-profile-16",
+          "name": "Value Drivers",
+          "description": "Identify and analyze the key drivers of value for a company.",
+          "tags": [
+            "value-drivers",
+            "fundamental-analysis",
+            "strategy",
+            "company"
+          ],
+          "preview": {
+            "markdown": "1. Identify the 3-5 most important drivers of value for the company.\n2. For each driver, explain why it is important and how it impacts the company's value.\n3. Analyze the sustainability and potential risks for each value driver.\n4. Conduct a sensitivity analysis to show how changes in the drivers would affect the company's valuation."
+          },
+          "instructions": {
+            "markdown": "**How to use:**\nProvide a company name to identify and analyze its key value drivers.\n\n**Required Tools:**\n- Company Financials\n- Web Search\n- Math Extension"
+          },
+          "settings": [],
+          "parameters": [
+            {
+              "key": "company",
+              "label": "Company",
+              "type": "text",
+              "placeholder": "e.g., Costco",
+              "required": true
+            }
+          ]
         }
       ]
     }
