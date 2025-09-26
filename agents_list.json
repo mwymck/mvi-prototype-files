@@ -6,27 +6,9 @@
     "model-type": "primary"
   },
   {
-    "model-name": "Claude AI",
+    "model-name": "Advanced thinking",
     "model-id": "Claude 4 Sonnet",
     "model-description": "Long-context precision and instruction fidelity",
-    "model-type": "primary"
-  },
-  {
-    "model-name": "Deep Analyst",
-    "model-id": "o3",
-    "model-description": "Cost efficient reasoning for everyday decisions",
-    "model-type": "primary"
-  },
-  {
-    "model-name": "Deep Analyst Pro",
-    "model-id": "o3 Pro",
-    "model-description": "Advanced reasoning for complex analysis",
-    "model-type": "primary"
-  },
-  {
-    "model-name": "Gemini AI",
-    "model-id": "Gemini 2.5 Pro",
-    "model-description": "Multimodal intelligence across text and vision",
     "model-type": "primary"
   },
   {
