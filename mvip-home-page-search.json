@@ -442,6 +442,349 @@
       "listing": "Sector"
     },
     {
+      "name": "Telecommunications Industry",
+      "type": "Industry",
+      "metric": "Market Cap: $1.9T",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Utilities Sector",
+      "type": "Industry",
+      "metric": "Market Cap: $1.7T",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Real Estate Sector",
+      "type": "Industry",
+      "metric": "Market Cap: $1.4T",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Materials Sector",
+      "type": "Industry",
+      "metric": "Market Cap: $2.1T",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Industrials Sector",
+      "type": "Industry",
+      "metric": "Market Cap: $5.8T",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Consumer Staples Sector",
+      "type": "Industry",
+      "metric": "Market Cap: $4.6T",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Healthcare Sector",
+      "type": "Industry",
+      "metric": "Market Cap: $8.9T",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Technology Sector",
+      "type": "Industry",
+      "metric": "Market Cap: $18.2T",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Automotive Industry",
+      "type": "Industry",
+      "metric": "Market Size: $3.8T",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Aerospace & Defense Industry",
+      "type": "Industry",
+      "metric": "Market Size: $905B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Banking Industry",
+      "type": "Industry",
+      "metric": "Market Cap: $7.5T",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Insurance Industry",
+      "type": "Industry",
+      "metric": "Market Cap: $3.2T",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Asset Management Industry",
+      "type": "Industry",
+      "metric": "AUM: $120T",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Pharmaceuticals Industry",
+      "type": "Industry",
+      "metric": "Market Size: $1.6T",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Medical Devices Industry",
+      "type": "Industry",
+      "metric": "Market Size: $540B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "SaaS Industry",
+      "type": "Industry",
+      "metric": "Market Size: $197B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Cloud Computing Industry",
+      "type": "Industry",
+      "metric": "Market Size: $680B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Cybersecurity Industry",
+      "type": "Industry",
+      "metric": "Market Size: $185B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "AI & Machine Learning Industry",
+      "type": "Industry",
+      "metric": "Market Size: $196B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "5G Infrastructure Industry",
+      "type": "Industry",
+      "metric": "Market Size: $47B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Internet of Things (IoT) Industry",
+      "type": "Industry",
+      "metric": "Market Size: $622B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Electric Vehicles (EV) Industry",
+      "type": "Industry",
+      "metric": "Market Size: $388B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Renewable Energy Industry",
+      "type": "Industry",
+      "metric": "Market Size: $1.2T",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Oil & Gas Industry",
+      "type": "Industry",
+      "metric": "Market Cap: $4.8T",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Mining Industry",
+      "type": "Industry",
+      "metric": "Market Cap: $1.5T",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Construction Industry",
+      "type": "Industry",
+      "metric": "Market Size: $14.3T",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Food & Beverage Industry",
+      "type": "Industry",
+      "metric": "Market Size: $8.9T",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Restaurants & Hospitality Industry",
+      "type": "Industry",
+      "metric": "Market Size: $4.7T",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Apparel & Fashion Industry",
+      "type": "Industry",
+      "metric": "Market Size: $1.9T",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Luxury Goods Industry",
+      "type": "Industry",
+      "metric": "Market Size: $354B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Gaming Industry",
+      "type": "Industry",
+      "metric": "Market Size: $227B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Streaming & Media Industry",
+      "type": "Industry",
+      "metric": "Market Size: $544B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Social Media Industry",
+      "type": "Industry",
+      "metric": "Market Size: $226B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Logistics & Supply Chain Industry",
+      "type": "Industry",
+      "metric": "Market Size: $9.6T",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Transportation Industry",
+      "type": "Industry",
+      "metric": "Market Size: $7.8T",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Airlines Industry",
+      "type": "Industry",
+      "metric": "Market Cap: $258B",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Hotels & Lodging Industry",
+      "type": "Industry",
+      "metric": "Market Cap: $312B",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Commercial Real Estate Industry",
+      "type": "Industry",
+      "metric": "Market Size: $18.5T",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Residential Real Estate Industry",
+      "type": "Industry",
+      "metric": "Market Size: $33.6T",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "REITs (Real Estate Investment Trusts)",
+      "type": "Industry",
+      "metric": "Market Cap: $1.4T",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Private Equity Industry",
+      "type": "Industry",
+      "metric": "AUM: $7.5T",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Hedge Funds Industry",
+      "type": "Industry",
+      "metric": "AUM: $4.3T",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Venture Capital Industry",
+      "type": "Industry",
+      "metric": "AUM: $1.2T",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Cryptocurrency Industry",
+      "type": "Industry",
+      "metric": "Market Cap: $2.1T",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Blockchain Technology Industry",
+      "type": "Industry",
+      "metric": "Market Size: $17.5B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Education Technology (EdTech) Industry",
+      "type": "Industry",
+      "metric": "Market Size: $254B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Legal Tech Industry",
+      "type": "Industry",
+      "metric": "Market Size: $29B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Human Resources Tech Industry",
+      "type": "Industry",
+      "metric": "Market Size: $40B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Marketing Technology (MarTech) Industry",
+      "type": "Industry",
+      "metric": "Market Size: $508B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
       "name": "EV Charging Market Dataset",
       "type": "Dataset",
       "metric": "Market Size: $22.5B",
