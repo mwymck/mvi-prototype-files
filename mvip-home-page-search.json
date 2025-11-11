@@ -87,24 +87,24 @@
   ],
   "aiSuggestions": {
     "apple": [
+      "Generate a Value Thesis for Apple",
       "Explain Apple's revenue drivers in 2024",
-      "Compare Apple and Microsoft revenue growth",
-      "What are the key risks facing Apple?"
+      "Compare Apple and Microsoft revenue growth"
     ],
     "microsoft": [
+      "Generate a Value Thesis for Microsoft",
       "Compare Microsoft and Alphabet cloud revenue",
-      "Explain Microsoft's AI strategy impact on growth",
-      "What drives Microsoft's margin expansion?"
+      "Explain Microsoft's AI strategy impact on growth"
     ],
     "tesla": [
+      "Generate a Value Thesis for Tesla",
       "Compare Tesla and Rivian delivery growth",
-      "Explain Tesla's production capacity expansion",
-      "What are Tesla's key competitive advantages?"
+      "Explain Tesla's production capacity expansion"
     ],
     "polestar": [
+      "Generate a Value Thesis for Polestar",
       "Compare Polestar and Tesla market positioning",
-      "Explain Polestar's path to profitability",
-      "What drives Polestar's revenue growth?"
+      "Explain Polestar's path to profitability"
     ],
     "s&p": [
       "Explain S&P 500 EPS drivers in 2024",
@@ -147,9 +147,9 @@
       "Explain interest rate impact on equity markets"
     ],
     "default": [
-      "Explain S&P 500 EPS growth in 2024",
-      "Compare Apple and Microsoft revenue drivers",
-      "What are the key trends in consumer discretionary?"
+      "Generate a Value Thesis for this company",
+      "Compare performance to industry peers",
+      "Explain key revenue and margin drivers"
     ]
   }
 }
