@@ -1,1 +1,156 @@
-placeholder
+{
+  "entities": [
+    {
+      "name": "Apple Inc.",
+      "type": "Company",
+      "metric": "Revenue: $394.3B",
+      "updated": "FY2024",
+      "listing": "Public"
+    },
+    {
+      "name": "Microsoft Corporation",
+      "type": "Company",
+      "metric": "Revenue: $245.1B",
+      "updated": "FY2024",
+      "listing": "Public"
+    },
+    {
+      "name": "Polestar Automotive UK PLC",
+      "type": "Company",
+      "metric": "Revenue: $2,034M",
+      "updated": "FY2024",
+      "listing": "Public"
+    },
+    {
+      "name": "Tesla Inc.",
+      "type": "Company",
+      "metric": "Revenue: $96.8B",
+      "updated": "FY2024",
+      "listing": "Public"
+    },
+    {
+      "name": "Amazon.com Inc.",
+      "type": "Company",
+      "metric": "Revenue: $574.8B",
+      "updated": "FY2024",
+      "listing": "Public"
+    },
+    {
+      "name": "S&P 500",
+      "type": "Index",
+      "metric": "Price: 5,872 pts",
+      "updated": "Nov 2024",
+      "listing": "Index"
+    },
+    {
+      "name": "NASDAQ Composite",
+      "type": "Index",
+      "metric": "Price: 18,972 pts",
+      "updated": "Nov 2024",
+      "listing": "Index"
+    },
+    {
+      "name": "Rivian Automotive",
+      "type": "Company",
+      "metric": "Revenue: $4.4B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Consumer Discretionary Sector",
+      "type": "Industry",
+      "metric": "Market Cap: $8.2T",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Alphabet Inc.",
+      "type": "Company",
+      "metric": "Revenue: $307.4B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Global Tech Revenue Dataset",
+      "type": "Dataset",
+      "metric": "Updated: Q3 2024",
+      "updated": "Oct 2024",
+      "listing": "Dataset"
+    },
+    {
+      "name": "Meta Platforms Inc.",
+      "type": "Company",
+      "metric": "Revenue: $134.9B",
+      "updated": "FY2023",
+      "listing": "Public"
+    }
+  ],
+  "aiSuggestions": {
+    "apple": [
+      "Explain Apple's revenue drivers in 2024",
+      "Compare Apple and Microsoft revenue growth",
+      "What are the key risks facing Apple?"
+    ],
+    "microsoft": [
+      "Compare Microsoft and Alphabet cloud revenue",
+      "Explain Microsoft's AI strategy impact on growth",
+      "What drives Microsoft's margin expansion?"
+    ],
+    "tesla": [
+      "Compare Tesla and Rivian delivery growth",
+      "Explain Tesla's production capacity expansion",
+      "What are Tesla's key competitive advantages?"
+    ],
+    "polestar": [
+      "Compare Polestar and Tesla market positioning",
+      "Explain Polestar's path to profitability",
+      "What drives Polestar's revenue growth?"
+    ],
+    "s&p": [
+      "Explain S&P 500 EPS drivers in 2024",
+      "Compare S&P 500 sector performance",
+      "What are the key risks to S&P 500 valuations?"
+    ],
+    "revenue": [
+      "Compare revenue growth across tech companies",
+      "What drives revenue growth in consumer discretionary?",
+      "Explain revenue trends in the electric vehicle sector"
+    ],
+    "compare": [
+      "Compare Apple and Microsoft revenue growth",
+      "Compare Tesla and Rivian market share",
+      "Compare tech sector valuation multiples"
+    ],
+    "growth": [
+      "What drives growth in the tech sector?",
+      "Explain EV market growth trends",
+      "Compare growth rates across industries"
+    ],
+    "trend": [
+      "What are the key trends in consumer discretionary?",
+      "Explain margin trends in tech companies",
+      "What trends are driving EV adoption?"
+    ],
+    "drivers": [
+      "What are the key drivers of tech sector growth?",
+      "Explain the drivers of S&P 500 performance",
+      "What drives valuation multiples expansion?"
+    ],
+    "why": [
+      "Why is tech sector outperforming?",
+      "Why are EV companies struggling with profitability?",
+      "Why are valuations elevated in 2024?"
+    ],
+    "explain": [
+      "Explain the impact of AI on tech valuations",
+      "Explain consumer discretionary sector dynamics",
+      "Explain interest rate impact on equity markets"
+    ],
+    "default": [
+      "Explain S&P 500 EPS growth in 2024",
+      "Compare Apple and Microsoft revenue drivers",
+      "What are the key trends in consumer discretionary?"
+    ]
+  }
+}
+
