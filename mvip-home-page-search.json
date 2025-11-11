@@ -15,10 +15,31 @@
       "listing": "Public"
     },
     {
-      "name": "Polestar Automotive UK PLC",
+      "name": "NVIDIA Corporation",
       "type": "Company",
-      "metric": "Revenue: $2,034M",
+      "metric": "Revenue: $60.9B",
       "updated": "FY2024",
+      "listing": "Public"
+    },
+    {
+      "name": "Amazon.com Inc.",
+      "type": "Company",
+      "metric": "Revenue: $574.8B",
+      "updated": "FY2024",
+      "listing": "Public"
+    },
+    {
+      "name": "Meta Platforms Inc.",
+      "type": "Company",
+      "metric": "Revenue: $134.9B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Alphabet Inc.",
+      "type": "Company",
+      "metric": "Revenue: $307.4B",
+      "updated": "FY2023",
       "listing": "Public"
     },
     {
@@ -29,10 +50,290 @@
       "listing": "Public"
     },
     {
-      "name": "Amazon.com Inc.",
+      "name": "Polestar Automotive UK PLC",
       "type": "Company",
-      "metric": "Revenue: $574.8B",
+      "metric": "Revenue: $2,034M",
       "updated": "FY2024",
+      "listing": "Public"
+    },
+    {
+      "name": "Rivian Automotive",
+      "type": "Company",
+      "metric": "Revenue: $4.4B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Netflix Inc.",
+      "type": "Company",
+      "metric": "Revenue: $33.7B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Spotify Technology S.A.",
+      "type": "Company",
+      "metric": "Revenue: €13.2B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Salesforce Inc.",
+      "type": "Company",
+      "metric": "Revenue: $34.9B",
+      "updated": "FY2024",
+      "listing": "Public"
+    },
+    {
+      "name": "Adobe Inc.",
+      "type": "Company",
+      "metric": "Revenue: $19.4B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Shopify Inc.",
+      "type": "Company",
+      "metric": "Revenue: $7.1B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Boeing Company",
+      "type": "Company",
+      "metric": "Revenue: $77.8B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Starbucks Corporation",
+      "type": "Company",
+      "metric": "Revenue: $36.2B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Home Depot Inc.",
+      "type": "Company",
+      "metric": "Revenue: $157.4B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Costco Wholesale Corporation",
+      "type": "Company",
+      "metric": "Revenue: $242.3B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Walt Disney Company",
+      "type": "Company",
+      "metric": "Revenue: $88.9B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Johnson & Johnson",
+      "type": "Company",
+      "metric": "Revenue: $85.2B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Berkshire Hathaway Inc.",
+      "type": "Company",
+      "metric": "Revenue: $364.5B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "JPMorgan Chase & Co.",
+      "type": "Company",
+      "metric": "Revenue: $158.1B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Bank of America Corp.",
+      "type": "Company",
+      "metric": "Revenue: $113.2B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Goldman Sachs Group Inc.",
+      "type": "Company",
+      "metric": "Revenue: $46.2B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Visa Inc.",
+      "type": "Company",
+      "metric": "Revenue: $32.7B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Mastercard Inc.",
+      "type": "Company",
+      "metric": "Revenue: $25.1B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "PayPal Holdings Inc.",
+      "type": "Company",
+      "metric": "Revenue: $29.8B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Block Inc.",
+      "type": "Company",
+      "metric": "Revenue: $21.9B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Stripe Inc.",
+      "type": "Company",
+      "metric": "Valuation: $50B",
+      "updated": "2023",
+      "listing": "Private"
+    },
+    {
+      "name": "Coinbase Global Inc.",
+      "type": "Company",
+      "metric": "Revenue: $3.1B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Pfizer Inc.",
+      "type": "Company",
+      "metric": "Revenue: $58.5B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "UnitedHealth Group Inc.",
+      "type": "Company",
+      "metric": "Revenue: $371.6B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Moderna Inc.",
+      "type": "Company",
+      "metric": "Revenue: $6.8B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Walmart Inc.",
+      "type": "Company",
+      "metric": "Revenue: $648.1B",
+      "updated": "FY2024",
+      "listing": "Public"
+    },
+    {
+      "name": "Target Corporation",
+      "type": "Company",
+      "metric": "Revenue: $107.4B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Uber Technologies Inc.",
+      "type": "Company",
+      "metric": "Revenue: $37.3B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Airbnb Inc.",
+      "type": "Company",
+      "metric": "Revenue: $9.9B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "DoorDash Inc.",
+      "type": "Company",
+      "metric": "Revenue: $8.6B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Snowflake Inc.",
+      "type": "Company",
+      "metric": "Revenue: $2.8B",
+      "updated": "FY2024",
+      "listing": "Public"
+    },
+    {
+      "name": "ServiceNow Inc.",
+      "type": "Company",
+      "metric": "Revenue: $9.3B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Palantir Technologies Inc.",
+      "type": "Company",
+      "metric": "Revenue: $2.2B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Intel Corporation",
+      "type": "Company",
+      "metric": "Revenue: $54.2B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Advanced Micro Devices Inc.",
+      "type": "Company",
+      "metric": "Revenue: $22.7B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Qualcomm Inc.",
+      "type": "Company",
+      "metric": "Revenue: $35.8B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Micron Technology Inc.",
+      "type": "Company",
+      "metric": "Revenue: $15.5B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Broadcom Inc.",
+      "type": "Company",
+      "metric": "Revenue: $35.8B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "ExxonMobil Corporation",
+      "type": "Company",
+      "metric": "Revenue: $344.6B",
+      "updated": "FY2023",
+      "listing": "Public"
+    },
+    {
+      "name": "Chevron Corporation",
+      "type": "Company",
+      "metric": "Revenue: $200.9B",
+      "updated": "FY2023",
       "listing": "Public"
     },
     {
@@ -50,11 +351,25 @@
       "listing": "Index"
     },
     {
-      "name": "Rivian Automotive",
-      "type": "Company",
-      "metric": "Revenue: $4.4B",
-      "updated": "FY2023",
-      "listing": "Public"
+      "name": "MSCI ACWI",
+      "type": "Index",
+      "metric": "Price: 794 pts",
+      "updated": "Nov 2024",
+      "listing": "Index"
+    },
+    {
+      "name": "Semiconductors Industry",
+      "type": "Industry",
+      "metric": "Market Cap: $3.8T",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Software Industry",
+      "type": "Industry",
+      "metric": "Market Cap: $5.2T",
+      "updated": "Nov 2024",
+      "listing": "Sector"
     },
     {
       "name": "Consumer Discretionary Sector",
@@ -64,11 +379,74 @@
       "listing": "Sector"
     },
     {
-      "name": "Alphabet Inc.",
-      "type": "Company",
-      "metric": "Revenue: $307.4B",
-      "updated": "FY2023",
-      "listing": "Public"
+      "name": "Digital Advertising Industry",
+      "type": "Industry",
+      "metric": "Market Size: $667B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "E-commerce Platforms Industry",
+      "type": "Industry",
+      "metric": "Market Size: $6.3T",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Payments Industry",
+      "type": "Industry",
+      "metric": "Market Size: $2.8T",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Fintech Industry",
+      "type": "Industry",
+      "metric": "Market Cap: $550B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Healthcare IT Industry",
+      "type": "Industry",
+      "metric": "Market Size: $390B",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Biotechnology Industry",
+      "type": "Industry",
+      "metric": "Market Cap: $1.8T",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Energy Sector",
+      "type": "Industry",
+      "metric": "Market Cap: $6.2T",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Financial Services Sector",
+      "type": "Industry",
+      "metric": "Market Cap: $12.4T",
+      "updated": "Nov 2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "Retail Industry",
+      "type": "Industry",
+      "metric": "Market Size: $28.5T",
+      "updated": "2024",
+      "listing": "Sector"
+    },
+    {
+      "name": "EV Charging Market Dataset",
+      "type": "Dataset",
+      "metric": "Market Size: $22.5B",
+      "updated": "2024",
+      "listing": "Dataset"
     },
     {
       "name": "Global Tech Revenue Dataset",
@@ -78,79 +456,373 @@
       "listing": "Dataset"
     },
     {
-      "name": "Meta Platforms Inc.",
-      "type": "Company",
-      "metric": "Revenue: $134.9B",
-      "updated": "FY2023",
-      "listing": "Public"
+      "name": "Cloud Infrastructure Dataset",
+      "type": "Dataset",
+      "metric": "Market Size: $270B",
+      "updated": "2024",
+      "listing": "Dataset"
     }
   ],
   "aiSuggestions": {
     "apple": [
-      "Generate a Value Thesis for Apple",
-      "Explain Apple's revenue drivers in 2024",
-      "Compare Apple and Microsoft revenue growth"
+      "What's driving Apple's valuation premium vs. peers?",
+      "How has Apple's capital allocation evolved since 2020?",
+      "Break down Apple's Services segment growth trajectory"
     ],
     "microsoft": [
-      "Generate a Value Thesis for Microsoft",
-      "Compare Microsoft and Alphabet cloud revenue",
-      "Explain Microsoft's AI strategy impact on growth"
+      "How is Azure growth impacting Microsoft's margin profile?",
+      "What are analysts saying about Microsoft's AI strategy?",
+      "Compare Microsoft vs. Alphabet cloud infrastructure revenue"
+    ],
+    "nvidia": [
+      "Why is NVIDIA trading at a 60x P/E multiple?",
+      "What's the bull vs. bear case on data center demand?",
+      "How sustainable is NVIDIA's gross margin expansion?"
+    ],
+    "amazon": [
+      "Which Amazon segment is most undervalued by the street?",
+      "How has AWS margin evolved over the last 3 years?",
+      "What's driving Amazon's retail operating leverage?"
+    ],
+    "meta": [
+      "Is Meta's Reality Labs spending justified by TAM?",
+      "How has Meta's ad pricing trended vs. Alphabet?",
+      "What are the key debates from Meta's recent earnings?"
+    ],
+    "alphabet": [
+      "How defensible is Google Search's margin profile?",
+      "What's the impact of AI on Alphabet's cost structure?",
+      "Compare Alphabet vs. Meta ARPU growth by geography"
+    ],
+    "google": [
+      "How is AI search impacting Google's query volume?",
+      "What's the long-term thesis on YouTube's profitability?",
+      "Compare Google Cloud vs. AWS vs. Azure growth rates"
     ],
     "tesla": [
-      "Generate a Value Thesis for Tesla",
-      "Compare Tesla and Rivian delivery growth",
-      "Explain Tesla's production capacity expansion"
+      "What's priced in to Tesla's current valuation?",
+      "How does Tesla's vertical integration affect margins?",
+      "Compare Tesla vs. legacy auto on unit economics"
     ],
     "polestar": [
-      "Generate a Value Thesis for Polestar",
-      "Compare Polestar and Tesla market positioning",
-      "Explain Polestar's path to profitability"
+      "When will Polestar reach positive free cash flow?",
+      "How does Polestar's brand positioning compare to Tesla?",
+      "What's the realistic TAM for Polestar's addressable market?"
+    ],
+    "rivian": [
+      "What's the path to profitability for Rivian?",
+      "How does Rivian's R1 platform compare to competitors?",
+      "Analyze Rivian's cash burn and runway"
+    ],
+    "netflix": [
+      "How is the password-sharing crackdown impacting ARPU?",
+      "What's the TAM for Netflix's ad-supported tier?",
+      "Compare Netflix vs. Disney+ subscriber growth trends"
+    ],
+    "spotify": [
+      "What's driving Spotify's podcast monetization strategy?",
+      "How sustainable is Spotify's premium subscriber growth?",
+      "Build an LTV model for Spotify's cohorts"
+    ],
+    "salesforce": [
+      "What are the key themes from Salesforce's earnings call?",
+      "How is Salesforce positioned in the CRM consolidation?",
+      "Analyze Salesforce's M&A strategy and returns"
+    ],
+    "adobe": [
+      "How has Adobe's Creative Cloud pricing power evolved?",
+      "What's the competitive threat from Figma alternatives?",
+      "Compare Adobe's SaaS margins vs. Microsoft, Salesforce"
+    ],
+    "shopify": [
+      "What are analysts most focused on for Shopify right now?",
+      "How is Shopify's merchant cohort retention trending?",
+      "Compare Shopify vs. Amazon marketplace economics"
+    ],
+    "boeing": [
+      "How severe is Boeing's cash flow and liquidity situation?",
+      "What's the recovery timeline for 737 MAX deliveries?",
+      "Assess Boeing's quality and safety checklist"
+    ],
+    "starbucks": [
+      "How has Starbucks' same-store sales trended vs. peers?",
+      "What's driving Starbucks' China comp underperformance?",
+      "Analyze Starbucks' TSR decomposition over 5 years"
+    ],
+    "disney": [
+      "Which Disney segment has the best margin expansion opportunity?",
+      "How is Disney+ subscriber churn trending vs. Netflix?",
+      "What's the bull case for Disney's theme parks business?"
+    ],
+    "jpmorgan": [
+      "How does JPMorgan's NII sensitivity compare to peers?",
+      "What's the outlook for JPMorgan's investment banking fees?",
+      "Analyze JPMorgan's capital allocation priorities"
+    ],
+    "bank of america": [
+      "How is deposit mix shifting at Bank of America?",
+      "What's the credit quality outlook for BofA's loan book?",
+      "Compare BofA vs. JPMorgan on efficiency ratio"
+    ],
+    "goldman sachs": [
+      "What's the strategic rationale for Goldman's consumer exit?",
+      "How volatile is Goldman's trading revenue historically?",
+      "Analyze Goldman's wealth management growth trajectory"
+    ],
+    "visa": [
+      "How defensible is Visa's network moat long-term?",
+      "What's the TAM for Visa's B2B payment opportunity?",
+      "Compare Visa vs. Mastercard on cross-border volume"
+    ],
+    "mastercard": [
+      "How is Mastercard's value-added services revenue scaling?",
+      "What's the competitive threat from fintech disruptors?",
+      "Analyze Mastercard's geographic revenue mix evolution"
+    ],
+    "paypal": [
+      "What's driving PayPal's active user churn trends?",
+      "How does PayPal's take rate compare to Block, Stripe?",
+      "Analyze PayPal's Venmo monetization progress"
+    ],
+    "block": [
+      "How profitable is Block's Cash App at maturity?",
+      "What's the TAM for Block's Square seller ecosystem?",
+      "Compare Block vs. PayPal on unit economics"
+    ],
+    "stripe": [
+      "What valuation multiple is Stripe trading at vs. peers?",
+      "How does Stripe's product roadmap compare to Adyen?",
+      "Estimate Stripe's revenue and margin profile"
+    ],
+    "coinbase": [
+      "How correlated is Coinbase's revenue to crypto volatility?",
+      "What's the bull case for Coinbase's staking revenue?",
+      "Analyze Coinbase's competitive position vs. Binance"
+    ],
+    "pfizer": [
+      "What's the post-COVID revenue outlook for Pfizer?",
+      "How strong is Pfizer's R&D pipeline for 2025-2027?",
+      "Analyze Pfizer's recent M&A strategy and returns"
+    ],
+    "unitedhealth": [
+      "How sustainable is UnitedHealth's margin expansion?",
+      "What's driving Optum's revenue growth acceleration?",
+      "Compare UnitedHealth vs. Humana on medical loss ratio"
+    ],
+    "moderna": [
+      "What's the realistic TAM for Moderna's mRNA platform?",
+      "How diversified is Moderna's pipeline beyond COVID?",
+      "Analyze Moderna's cash burn and funding runway"
+    ],
+    "walmart": [
+      "How is Walmart's e-commerce penetration trending?",
+      "What's the ROI on Walmart's fulfillment capex?",
+      "Compare Walmart vs. Target on same-store sales growth"
+    ],
+    "target": [
+      "What's driving Target's inventory turns improvement?",
+      "How does Target's private label strategy compare to Walmart?",
+      "Analyze Target's TSR vs. retail sector average"
+    ],
+    "uber": [
+      "When does Uber Mobility reach steady-state margins?",
+      "What's the profitability profile for Uber Eats at scale?",
+      "Compare Uber vs. Lyft on driver and rider economics"
+    ],
+    "airbnb": [
+      "How defensible is Airbnb's take rate long-term?",
+      "What's the TAM for Airbnb Experiences and new verticals?",
+      "Analyze Airbnb's host and guest retention cohorts"
+    ],
+    "doordash": [
+      "What's the path to 5%+ EBITDA margin for DoorDash?",
+      "How does DoorDash's order frequency compare to Uber Eats?",
+      "Analyze DoorDash's merchant and dasher retention"
+    ],
+    "snowflake": [
+      "How sustainable is Snowflake's 100%+ net retention rate?",
+      "What's the competitive threat from Databricks?",
+      "Build a cohort-based revenue model for Snowflake"
+    ],
+    "servicenow": [
+      "What's driving ServiceNow's expansion into new workflows?",
+      "How does ServiceNow's AI strategy differentiate vs. peers?",
+      "Analyze ServiceNow's dollar-based net retention trends"
+    ],
+    "palantir": [
+      "What's the realistic TAM for Palantir's commercial business?",
+      "How sticky are Palantir's government contracts?",
+      "Compare Palantir's unit economics vs. other AI platforms"
+    ],
+    "intel": [
+      "What's the bear case on Intel's foundry strategy?",
+      "How far behind is Intel vs. TSMC on process technology?",
+      "Analyze Intel's capital allocation and shareholder returns"
+    ],
+    "amd": [
+      "How is AMD positioned in the data center AI accelerator market?",
+      "What's the competitive threat from NVIDIA in server CPUs?",
+      "Compare AMD vs. Intel on gross margin trajectory"
+    ],
+    "qualcomm": [
+      "How exposed is Qualcomm to smartphone market cyclicality?",
+      "What's the TAM for Qualcomm's automotive and IoT segments?",
+      "Analyze Qualcomm's licensing revenue sustainability"
+    ],
+    "broadcom": [
+      "What's driving Broadcom's semiconductor gross margins?",
+      "How accretive have Broadcom's acquisitions been historically?",
+      "Compare Broadcom vs. peers on R&D efficiency"
+    ],
+    "exxon": [
+      "How does Exxon's Permian asset base compare to peers?",
+      "What's the sensitivity of Exxon's FCF to oil prices?",
+      "Analyze Exxon's energy transition strategy and capex"
+    ],
+    "chevron": [
+      "How is Chevron's LNG portfolio positioned vs. peers?",
+      "What's the ROI on Chevron's recent M&A activity?",
+      "Compare Chevron vs. Exxon on capital discipline"
+    ],
+    "semiconductors": [
+      "Which semiconductor sub-sectors outperformed in the last 3Y?",
+      "How are valuations trending in semis vs. broader tech?",
+      "What's driving the geographic mix shift in semiconductor revenue?"
+    ],
+    "software": [
+      "How does SaaS valuation dispersion look right now?",
+      "Which software verticals have the best rule-of-40 scores?",
+      "Compare enterprise vs. SMB-focused software company multiples"
     ],
     "s&p": [
-      "Explain S&P 500 EPS drivers in 2024",
-      "Compare S&P 500 sector performance",
-      "What are the key risks to S&P 500 valuations?"
+      "Which S&P 500 sectors are driving recent index performance?",
+      "How concentrated is S&P 500 market cap in top 10 names?",
+      "Compare S&P 500 forward P/E to historical averages"
     ],
-    "revenue": [
-      "Compare revenue growth across tech companies",
-      "What drives revenue growth in consumer discretionary?",
-      "Explain revenue trends in the electric vehicle sector"
+    "payments": [
+      "How is the payments industry TAM evolving with embedded finance?",
+      "Compare take rates across different payment processing segments",
+      "What's the competitive landscape for B2B payments?"
+    ],
+    "fintech": [
+      "Which fintech segments have the most attractive unit economics?",
+      "How has fintech valuation compressed vs. 2021 peak?",
+      "What's the TAM for AI-powered financial services?"
+    ],
+    "ev": [
+      "What's the realistic TAM for EV charging infrastructure by 2030?",
+      "Compare EV OEMs on battery cost per kWh trajectory",
+      "How are traditional auto margins comparing to EV-native players?"
+    ],
+    "cloud": [
+      "How is cloud infrastructure market share shifting?",
+      "What's the margin profile at scale for hyperscale cloud providers?",
+      "Estimate TAM/SAM/SOM for multi-cloud management tools"
+    ],
+    "retail": [
+      "How is retail e-commerce penetration trending by category?",
+      "Compare omnichannel vs. pure-play online retail margins",
+      "What's the impact of fast fashion on traditional retail TSR?"
+    ],
+    "healthcare": [
+      "Which healthcare IT segments have the highest growth rates?",
+      "How defensible are telehealth margins long-term?",
+      "Compare value-based care vs. fee-for-service economics"
+    ],
+    "energy": [
+      "How is energy capex shifting toward renewables vs. oil & gas?",
+      "What's the TSR performance of traditional energy vs. renewables?",
+      "Compare integrated majors vs. pure-play E&Ps on FCF yield"
     ],
     "compare": [
-      "Compare Apple and Microsoft revenue growth",
-      "Compare Tesla and Rivian market share",
-      "Compare tech sector valuation multiples"
+      "How do these companies' margins stack up vs. peers?",
+      "Which has better capital efficiency: Company A or B?",
+      "Compare 3Y TSR decomposition across selected companies"
+    ],
+    "value thesis": [
+      "What's the 12-month bull vs. bear case for this company?",
+      "Which value drivers matter most for this business?",
+      "Run a quality checklist: how does this company score?"
+    ],
+    "tsr": [
+      "How much of TSR came from multiples vs. fundamentals?",
+      "Which companies outperformed on 5Y total shareholder return?",
+      "Compare TSR by quartile across this industry"
+    ],
+    "earnings": [
+      "What were the key themes from the last earnings call?",
+      "What are analysts expecting for next quarter's results?",
+      "How has guidance evolved over the past year?"
+    ],
+    "valuation": [
+      "How does this company's valuation compare to historical range?",
+      "What's priced in at current multiples?",
+      "Compare EV/Sales multiples across selected peers"
+    ],
+    "margin": [
+      "What's driving gross margin expansion or compression?",
+      "How does operating leverage compare to peers?",
+      "Track EBITDA margin trends over the last 5 years"
     ],
     "growth": [
-      "What drives growth in the tech sector?",
-      "Explain EV market growth trends",
-      "Compare growth rates across industries"
+      "What's the organic revenue growth rate vs. peers?",
+      "Which growth drivers are most sustainable long-term?",
+      "Compare revenue CAGR across industry sub-segments"
     ],
-    "trend": [
-      "What are the key trends in consumer discretionary?",
-      "Explain margin trends in tech companies",
-      "What trends are driving EV adoption?"
+    "market sizing": [
+      "What's the TAM/SAM/SOM for this market opportunity?",
+      "Build a bottom-up cohort model for this business",
+      "How fast is this market growing vs. adjacent categories?"
     ],
-    "drivers": [
-      "What are the key drivers of tech sector growth?",
-      "Explain the drivers of S&P 500 performance",
-      "What drives valuation multiples expansion?"
+    "ltv": [
+      "What are the key LTV drivers for this business model?",
+      "How does customer lifetime value compare across cohorts?",
+      "What would a 10% improvement in retention do to LTV?"
     ],
-    "why": [
-      "Why is tech sector outperforming?",
-      "Why are EV companies struggling with profitability?",
-      "Why are valuations elevated in 2024?"
+    "churn": [
+      "How does churn vary by customer cohort or segment?",
+      "What's the retention curve look like over 24 months?",
+      "Which factors correlate most strongly with churn?"
     ],
-    "explain": [
-      "Explain the impact of AI on tech valuations",
-      "Explain consumer discretionary sector dynamics",
-      "Explain interest rate impact on equity markets"
+    "segment": [
+      "Which business segment has the best margin profile?",
+      "How is revenue mix shifting across segments over time?",
+      "Compare segment growth rates vs. overall company average"
+    ],
+    "performance": [
+      "How have key operating metrics trended over time?",
+      "What's the ROI on recent capex and investments?",
+      "Compare this company's efficiency vs. best-in-class peers"
+    ],
+    "capital allocation": [
+      "How has capital allocation evolved in recent years?",
+      "What's the ROI on M&A vs. organic investment?",
+      "Compare buyback vs. dividend policies across peers"
+    ],
+    "moat": [
+      "How defensible is this company's competitive position?",
+      "What are the key sources of competitive advantage?",
+      "How sustainable is pricing power over the next 5 years?"
+    ],
+    "risk": [
+      "What are the key downside risks to this investment thesis?",
+      "How exposed is this company to cyclical headwinds?",
+      "What could cause a multiple de-rating from here?"
+    ],
+    "management": [
+      "How long has the current leadership team been in place?",
+      "What's the track record on strategy execution?",
+      "How does management compensation align with shareholders?"
+    ],
+    "trends": [
+      "What macro or industry trends are most impactful here?",
+      "How is the competitive landscape evolving?",
+      "Which emerging technologies could disrupt this business?"
     ],
     "default": [
-      "Generate a Value Thesis for this company",
-      "Compare performance to industry peers",
-      "Explain key revenue and margin drivers"
+      "What's the investment thesis for this company right now?",
+      "How does this company's performance stack up vs. peers?",
+      "What are the key metrics and trends to watch?"
     ]
   }
 }
-
